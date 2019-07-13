@@ -9,7 +9,7 @@ fetchAllClients = function(data, callback) {
         } else
         callback.setHeader('Content-Type', 'application/json');
         callback.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-        callback.setHeader('Access-Control-Allow-Origin', 'http://localhost:8000');
+        callback.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
         callback.end(JSON.stringify(rows));
         callback = rows;
         console.log("GET ALL CLIENTS");   
