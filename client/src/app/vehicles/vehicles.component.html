@@ -1,2 +1,7 @@
 <p>vehicles works!</p>
 <button (click)="myFunc()">Click Button</button>
+<ul>
+    <li *ngFor="let vehicle of httpdata; let i = index">
+      {{vehicle.NAME}}
+    </li>
+</ul>

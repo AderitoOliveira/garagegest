@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Vehicle } from './vehicles.model';
 
+
 @Component({
   selector: 'app-vehicles',
   templateUrl: './vehicles.component.html',
@@ -10,18 +11,23 @@ import { Vehicle } from './vehicles.model';
 
 export class VehiclesComponent implements OnInit {
 
-
-
   constructor(private httpClient: HttpClient) { 
   }
 
+  httpdata;
+
   ngOnInit() {
 
-    this.httpClient.get<Vehicle>('http://localhost:3000/xpto').subscribe((data: Vehicle)=>{
-      console.log(data[0].NAME);
-      console.log(data.ADDRESS);
+    this.httpClient.get<Vehicle>('http://localhost:3000/allclients').subscribe((data: Vehicle)=> this.displaydata(data));
+      //console.log(data);
       //alert(res);
-    });
+
+  }
+
+    
+  displaydata(data) {
+    this.httpdata = data;
+    console.log(this.httpdata)
   }
 
   myFunc(){
@@ -30,7 +36,7 @@ export class VehiclesComponent implements OnInit {
       //console.log(res);
       alert(res);
     }); */
-    this.httpClient.get('http://localhost:3000/xpto').subscribe((data)=>{
+    this.httpClient.get('http://localhost:3000/allclients').subscribe((data)=>{
       console.log(data);
       //alert(res);
     });

@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.get('/xpto', function(req, res, next) {
+router.get('/allclients', function(req, res, next) {
   //res.send(JSON.stringify({value: 1}));
   fetchAllClients(req, res,);
 });
