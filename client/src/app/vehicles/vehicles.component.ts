@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Vehicle } from './vehicles.model';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/';
+
 
 
 @Component({
@@ -10,6 +15,11 @@ import { Vehicle } from './vehicles.model';
 })
 
 export class VehiclesComponent implements OnInit {
+  displayedColumns: string[] = ['name', 'address'];
+  dataSource: MatTableDataSource<Vehicle>;
+
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   constructor(private httpClient: HttpClient) { 
   }
@@ -23,11 +33,18 @@ export class VehiclesComponent implements OnInit {
       //alert(res);
 
   }
-
     
   displaydata(data) {
     this.httpdata = data;
     console.log(this.httpdata)
+  }
+
+  applyFilter(filterValue: string) {
+    this.httpdata.filter = filterValue.trim().toLowerCase();
+
+    if (this.httpdata.paginator) {
+      this.httpdata.paginator.firstPage();
+    }
   }
 
   myFunc(){
