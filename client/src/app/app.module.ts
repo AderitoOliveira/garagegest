@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; 
+import { HttpModule } from '@angular/http';
 
 import { MatFormFieldModule, MatInputModule, MatPaginatorModule, MatTableModule, MatSortModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
@@ -18,6 +19,7 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpModule,
     MatFormFieldModule, 
     MatInputModule, 
     MatPaginatorModule, 
