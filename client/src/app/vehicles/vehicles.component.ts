@@ -19,8 +19,9 @@ import { VehicleService } from './vehicles.service';
 export class VehiclesComponent implements OnInit {
   httpdata = null;
   filterValue = null;
-  displayedColumns: string[] = ['name', 'address'];
+  displayedColumns: string[] = ['NAME', 'ADDRESS'];
   dataSource = new MatTableDataSource<Vehicle>(this.httpdata);
+
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -54,9 +55,11 @@ export class VehiclesComponent implements OnInit {
 
     console.log(filterValue);
 
-    if (this.httpdata.NAME) {
+    this.dataSource.filter = filterValue;
+
+    /* if (this.dataSource) {
       this.dataSource.paginator.firstPage();
-    }
+    } */
   }
 
   getVehicles(): void {
