@@ -9,11 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+import { CustomersComponent } from './customers/customers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    CustomersComponent
   ],
   imports: [
     BrowserModule,
