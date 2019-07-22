@@ -37,12 +37,12 @@ export class VehiclesComponent implements OnInit {
       //alert(res);
       console.log("Inside ngOnInit");
       this.getVehicles();
-      this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;
-      /* setTimeout(()=>{ 
+      //this.dataSource.paginator = this.paginator;
+      //this.dataSource.sort = this.sort;
+      setTimeout(()=>{ 
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-      }, 3000); */
+      }, 3000);
 
   }
     
