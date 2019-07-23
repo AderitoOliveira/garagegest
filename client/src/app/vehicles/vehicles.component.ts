@@ -19,7 +19,7 @@ import { VehicleService } from './vehicles.service';
 export class VehiclesComponent implements OnInit {
   httpdata = null;
   filterValue = null;
-  displayedColumns: string[] = ['NAME', 'ADDRESS'];
+  displayedColumns: string[] = ['REGISTRATION_PLATE' ,'CAR_BRAND' ,'CAR_MODEL' ,'KMS_REGISTERED' ,'CYLINDER_CAPACITY' ,'REGISTRATION_DATE' ,'FABRICATION_DATE' ,'VEHICLE_IDENTIFICATION_NUMBER' ,'KILLOWATT' ,'HORSEPOWER' ,'FUEL' ,'CREATED_DATE' ,'MODIFIED_DATE'];
   dataSource = new MatTableDataSource<Vehicle>(this.httpdata);
 
 
@@ -28,7 +28,6 @@ export class VehiclesComponent implements OnInit {
 
   constructor(private httpClient: HttpClient, private vehicleService: VehicleService) { 
   }
-  //httpdata = <Vehicle>{};
 
   ngOnInit() {
 

@@ -8,9 +8,15 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.get('/allclients', function(req, res, next) {
+router.get('/allCustomers', function(req, res, next) {
   //res.send(JSON.stringify({value: 1}));
-  fetchAllClients(req, res,);
+  fetchAllCustomers(req, res,);
+});
+
+
+router.get('/allVehicles', function(req, res, next) {
+  //res.send(JSON.stringify({value: 1}));
+  fetchAllVehicles(req, res,);
 });
 
 module.exports = router;

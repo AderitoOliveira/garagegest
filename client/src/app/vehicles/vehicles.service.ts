@@ -21,6 +21,6 @@ export class VehicleService {
 
         return of(this.httpdata); */
 
-        return this.httpClient.get('http://localhost:3000/allclients').pipe(map((res:any) => res)) 
+        return this.httpClient.get('http://localhost:3000/allVehicles').pipe(map((res:any) => res)) 
     }
   }
