@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Vehicle } from './customers.model';
+import { Customer } from './customers.model';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable()
-export class VehicleService {
+export class CustomerService {
  
-    httpdata = <Vehicle>{};
+    httpdata = <Customer>{};
 
     constructor(private httpClient: HttpClient) { }
    
-    getVehicles(): Observable<Vehicle> {
+    getCustomers(): Observable<Customer> {
       
         console.log("Inside getVehicles");
         /* this.httpClient.get<Vehicle>('http://localhost:3000/allclients').subscribe((data)=> {
@@ -23,4 +23,4 @@ export class VehicleService {
 
         return this.httpClient.get('http://localhost:3000/allclients').pipe(map((res:any) => res)) 
     }
-  }
+}

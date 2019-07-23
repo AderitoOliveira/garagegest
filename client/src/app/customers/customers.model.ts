@@ -1,17 +1,18 @@
-export class Vehicle {
-    constructor(
-      public REGISTRATION_PLATE: string,
-      public CAR_BRAND: string,
-      public CAR_MODEL: string,
-      public KMS_REGISTERED: number,
-      public CYLINDER_CAPACITY: number,
-      public REGISTRATION_DATE: Date,
-      public FABRICATION_DATE: Date,
-      public VEHICLE_IDENTIFICATION_NUMBER  : string,
-      public KILLOWATT: number,
-      public HORSEPOWER  : number,
-      public FUEL: string,
-      public CREATED_DATE: Date,
-      public MODIFIED_DATE: Date,
-    ) { }
+
+export class Customer {
+
+  constructor(
+    public CLIENT_ID: number,
+    public NAME: string,
+    public ADDRESS: string,
+    public CITY_LOCATION: number,
+    public FISCAL_CODE: string,
+    public IDENTITY_CARD: string,
+    public PHONE_NUMBER: number,
+    public EMAIL_ADDRESS: string,
+    public NICKNAME: string,
+    public CREATED_DATE: Date,
+    public MODIFIED_DATE: Date,
+  ) { }
+
 }
