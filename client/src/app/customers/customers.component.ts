@@ -19,7 +19,7 @@ export class CustomersComponent implements OnInit {
   filterValue = null;
   dataSource = new MatTableDataSource<Customer>(this.httpdata);
 
-  displayedColumns: string[] = ['NAME', 'ADDRESS'];
+  displayedColumns: string[] = ['NAME', 'ADDRESS', 'CITY_LOCATION', 'FISCAL_CODE', 'IDENTITY_CARD', 'PHONE_NUMBER', 'EMAIL_ADDRESS', 'NICKNAME', 'CREATED_DATE', 'MODIFIED_DATE'];
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;

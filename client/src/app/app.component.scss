@@ -133,7 +133,6 @@
 .wrapper {
     display: flex;
     align-items: stretch;
-    position:absolute;
 }
 
 /* ---------------------------------------------------
@@ -154,6 +153,10 @@
     width: 100%;
 }
 
-html {
-    background-color: rgb(243, 243, 243);
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
 }

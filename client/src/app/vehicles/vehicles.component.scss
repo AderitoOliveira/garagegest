@@ -15,6 +15,11 @@ table {
     width: 7%;
   }
 
+  .mat-header-cell, .mat-sort-header {
+    background-color: rgb(210, 235, 255);
+    font-weight: bold;
+  }
+
   .mat-cell, .mat-header-cell { 
     overflow: hidden; 
     text-overflow: ellipsis; 
