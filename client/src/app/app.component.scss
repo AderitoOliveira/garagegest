@@ -54,7 +54,7 @@
 #sidebar{
     transition: all 0.3s;
     width: 180px;
-    background-color: #222222;
+    background-color: #a2a2a2;
     min-width:180px;
     position: fixed;
     height: 100vh;
@@ -118,10 +118,13 @@
     z-index:0;
     padding-top:72px;
     padding-bottom:72px;
+    table-layout: fixed;
+    width: 100%;
 }
 
 .mainDiv {
-    background-color:rgb(255, 255, 255);
+    background-color:rgb(243, 243, 243);
+    width:2076px;
 }
 
 /* ---------------------------------------------------
@@ -130,6 +133,7 @@
 .wrapper {
     display: flex;
     align-items: stretch;
+    position:absolute;
 }
 
 /* ---------------------------------------------------
@@ -140,6 +144,16 @@
     width:100%;
     float:left;
     padding:0px;
-    background:#fafbfc;
+    background:#f3f1f1;
     padding-left: 180px;
+}
+
+.container {
+    padding-left: 10px;
+    table-layout: fixed;
+    width: 100%;
+}
+
+html {
+    background-color: rgb(243, 243, 243);
 }

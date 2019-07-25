@@ -38,10 +38,10 @@ export class VehiclesComponent implements OnInit {
       this.getVehicles();
       //this.dataSource.paginator = this.paginator;
       //this.dataSource.sort = this.sort;
-      setTimeout(()=>{ 
+      /* setTimeout(()=>{ 
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-      }, 3000);
+      }, 3000); */
 
   }
     
@@ -67,6 +67,9 @@ export class VehiclesComponent implements OnInit {
     this.vehicleService.getVehicles().subscribe(data => {
       console.log(data); 
       this.dataSource.data = data as any;
+
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     });
   }
 

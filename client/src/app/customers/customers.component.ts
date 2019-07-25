@@ -29,16 +29,19 @@ export class CustomersComponent implements OnInit {
   ngOnInit() {
     console.log("Inside ngOnInit");
       this.getCustomers();
-      setTimeout(()=>{ 
+      /* setTimeout(()=>{ 
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
-      }, 3000);
+      }, 3000); */
   }
 
   getCustomers(): void {
     this.customerService.getCustomers().subscribe(data => {
       console.log(data); 
       this.dataSource.data = data as any;
+
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     });
   }
 

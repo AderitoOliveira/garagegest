@@ -2,7 +2,7 @@
 @import '~@angular/material/theming';
 table {
     width: 100%;
-  }
+}
   
   .mat-form-field {
     font-size: 28px;
@@ -10,5 +10,13 @@ table {
   }
   
   td, th {
-    width: 25%;
+    //display: -webkit-box; // to make td as block
+    //word-break: break-word; // to make content justify
+    width: 7%;
+  }
+
+  .mat-cell, .mat-header-cell { 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    word-break: break-word; 
   }
