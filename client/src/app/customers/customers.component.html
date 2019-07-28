@@ -67,10 +67,15 @@
   
       <!-- Action Column -->
       <ng-container matColumnDef="ACTIONS">
-        <mat-header-cell  *matHeaderCellDef > Actions </mat-header-cell>
-        <mat-cell *matCellDef="let row" >
-          <i class="material-icons" (click)="delete(row.NAME)">delete</i>
-        </mat-cell>
+        <th mat-header-cell  *matHeaderCellDef > Actions </th>
+        <td *matCellDef="let row" >
+          <div class="row">
+            <div id="buttondiv">
+              <i class="btn btn-primary btn-sm button-side-by-side" (click)="delete(row.NAME)">Delete</i>
+              <i class="btn btn-warning btn-sm button-side-by-side" (click)="delete(row.NAME)">Details</i>
+            </div>
+          </div>
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
