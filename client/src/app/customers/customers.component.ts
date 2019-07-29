@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Routes, RouterModule, Router, ActivatedRoute } from '@angular/router';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
@@ -24,7 +25,7 @@ export class CustomersComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  constructor(private httpClient: HttpClient, private customerService: CustomerService) { }
+  constructor(private httpClient: HttpClient, private customerService: CustomerService, private router: Router) { }
 
   ngOnInit() {
     console.log("Inside ngOnInit");
@@ -64,6 +65,7 @@ export class CustomersComponent implements OnInit {
   }
 
   delete(row) {
-      alert(row);
+      this.router.navigate(['customerdetail']); (3)
+      //alert(row);
   }
 }
