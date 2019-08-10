@@ -1,21 +1,51 @@
 <!---
 <p>vehicles works!</p>
 <button (click)="myFunc()">Click Button</button>
-<table>
+-->
+
+<mat-form-field [floatLabel]="'never'">
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter" >
+</mat-form-field>
+
+<table class="table table-hover table-condensed">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Address</th>
+        <th class="col-md-1" mat-header-cell *matHeaderCellDef mat-sort-header>Matri.</th>
+        <th class="col-md-1">Marca</th>
+        <th class="col-md-1">Modelo</th>
+        <th class="col-md-1">Kms</th>
+        <th class="col-md-1">Cilin.</th>
+        <th class="col-md-1">Data Reg.</th>
+        <th class="col-md-1">Data Fabr.</th>
+        <th class="col-md-4">Nº Chassi</th>
+        <th class="col-md-1">Kwh</th>
+        <th class="col-md-1">Nº cv</th>
+        <th class="col-md-1">Combus.</th>
+        <th class="col-md-1">Data cria.</th>
+        <th class="col-md-1">Data modi.</th>
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let vehicle of httpdata; let i = index">
-        <td>{{vehicle.NAME}}</td>
-        <td>{{vehicle.ADDRESS}}</td>
+        <tr *ngFor="let vehicle of dataSource.data">
+        <td class="col-md-1" mat-cell *matCellDef="let vehicle" >{{vehicle.REGISTRATION_PLATE}}</td>
+        <td class="col-md-1">{{vehicle.CAR_BRAND}}</td>
+        <td class="col-md-1">{{vehicle.CAR_MODEL}}</td>
+        <td class="col-md-1">{{vehicle.KMS_REGISTERED}}</td>
+        <td class="col-md-1">{{vehicle.CYLINDER_CAPACITY}}</td>
+        <td class="col-md-1">{{vehicle.REGISTRATION_DATE}}</td>
+        <td class="col-md-1">{{vehicle.FABRICATION_DATE}}</td>
+        <td class="col-md-4">{{vehicle.VEHICLE_IDENTIFICATION_NUMBER}}</td>
+        <td class="col-md-1">{{vehicle.KILLOWATT}}</td>
+        <td class="col-md-1">{{vehicle.HORSEPOWER}}</td>
+        <td class="col-md-1">{{vehicle.FUEL}}</td>
+        <td class="col-md-1">{{vehicle.CREATED_DATE}}</td>
+        <td class="col-md-1">{{vehicle.MODIFIED_DATE}}</td>
         </tr>
     </tbody>
 </table>
--->
+
+
+<!--
 <mat-form-field [floatLabel]="'never'">
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
@@ -23,79 +53,79 @@
   <div class="mat-elevation-z10">
     <table mat-table [dataSource]="dataSource" matSort>
   
-      <!-- ID Column -->
+      
       <ng-container matColumnDef="REGISTRATION_PLATE">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Matri. </th>
         <td mat-cell *matCellDef="let row"> {{row.REGISTRATION_PLATE}} </td>
       </ng-container>
   
-      <!-- Progress Column -->
+      
       <ng-container matColumnDef="CAR_BRAND">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Marca </th>
         <td mat-cell *matCellDef="let row"> {{row.CAR_BRAND}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+      
       <ng-container matColumnDef="CAR_MODEL">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Modelo </th>
         <td mat-cell *matCellDef="let row"> {{row.CAR_MODEL}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+      
       <ng-container matColumnDef="KMS_REGISTERED">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Kms </th>
         <td mat-cell *matCellDef="let row"> {{row.KMS_REGISTERED}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+      
       <ng-container matColumnDef="CYLINDER_CAPACITY">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Cilin. </th>
         <td mat-cell *matCellDef="let row"> {{row.CYLINDER_CAPACITY}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+      
       <ng-container matColumnDef="REGISTRATION_DATE">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Data Reg. </th>
         <td mat-cell *matCellDef="let row"> {{row.REGISTRATION_DATE}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+      
       <ng-container matColumnDef="FABRICATION_DATE">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Data Fabr. </th>
         <td mat-cell *matCellDef="let row"> {{row.FABRICATION_DATE}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+      
       <ng-container matColumnDef="VEHICLE_IDENTIFICATION_NUMBER">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Nº Chassi </th>
         <td mat-cell *matCellDef="let row"> {{row.VEHICLE_IDENTIFICATION_NUMBER}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+      
       <ng-container matColumnDef="KILLOWATT">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Kwh </th>
         <td mat-cell *matCellDef="let row"> {{row.KILLOWATT}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+      
       <ng-container matColumnDef="HORSEPOWER">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Nº cv </th>
         <td mat-cell *matCellDef="let row"> {{row.HORSEPOWER}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+      
       <ng-container matColumnDef="FUEL">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Combus. </th>
         <td mat-cell *matCellDef="let row"> {{row.FUEL}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+      
       <ng-container matColumnDef="CREATED_DATE">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Data cria. </th>
         <td mat-cell *matCellDef="let row"> {{row.CREATED_DATE}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+      
       <ng-container matColumnDef="MODIFIED_DATE">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Data modi.. </th>
         <td mat-cell *matCellDef="let row"> {{row.MODIFIED_DATE}} </td>
@@ -110,4 +140,4 @@
     </mat-paginator>
 
 </div>
-  
+  -->
