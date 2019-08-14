@@ -4,10 +4,10 @@
 -->
 
 <mat-form-field [floatLabel]="'never'">
-  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter" >
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
 
-<table class="table table-hover table-condensed">
+<!-- <table class="table table-hover table-condensed">
     <thead>
       <tr>
         <th class="col-md-1" mat-header-cell *matHeaderCellDef mat-sort-header>Matri.</th>
@@ -42,10 +42,45 @@
         <td class="col-md-1">{{vehicle.MODIFIED_DATE}}</td>
         </tr>
     </tbody>
-</table>
-
-
-<!--
+</table> -->
+<div class="vehicle-table-wrap">
+  <div class="vehicle-table-header">
+    <div class="inner-wrap">
+      <div class="row">
+        <div class="col-xs-2 col-md-2 header-order-nr">Matri.</div>
+        <div class="col-xs-2 col-md-2 header-order-client">Marca</div>
+        <div class="col-xs-2 col-md-2 header-order-date">Modelo</div>
+        <div class="col-xs-2 col-md-2 header-order-date-end">Kms</div>
+        <div class="col-xs-2 col-md-2 header-order-products">Cilin.</div>
+        <div class="col-xs-2 col-md-2 header-order-state">Data Reg.</div>
+      </div>
+    </div>
+  </div>
+  <div id="vehicle-table-row">
+    <!--div class="vehicle-table-wrap"-->
+    <div class="inner-wrap">
+        <div *ngFor="let vehicle of dataSource.data">
+            <div class="row">
+                <div class="col-md-2 item-order-date">{{vehicle.REGISTRATION_PLATE}}</div>
+                <div class="col-md-2 item-order-date">{{vehicle.CAR_BRAND}}</div>
+                <div class="col-md-2 item-order-date">{{vehicle.CAR_MODEL}}</div>
+                <div class="col-md-2 item-order-date">{{vehicle.KMS_REGISTERED}}</div>
+                <div class="col-md-2 item-order-date">{{vehicle.CYLINDER_CAPACITY}}</div>
+                <div class="col-md-2 item-order-date">{{vehicle.REGISTRATION_DATE}}</div>
+               <!-- <div class="col-md-2 table-item item-order-date">{{vehicle.FABRICATION_DATE}}</div>
+                  <div class="col-md-2 table-item item-order-date">{{vehicle.VEHICLE_IDENTIFICATION_NUMBER}}</div>
+                  <div class="col-md-2 table-item item-order-date">{{vehicle.KILLOWATT}}</div>
+                  <div class="col-md-2 table-item item-order-date">{{vehicle.HORSEPOWER}}</div>
+                  <div class="col-md-2 table-item item-order-date">{{vehicle.FUEL}}</div>
+                  <div class="col-md-2 table-item item-order-date">{{vehicle.CREATED_DATE}}</div>
+                  <div class="col-md-2 table-item item-order-date">{{vehicle.MODIFIED_DATE}}</div> -->
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--/div-->
+</div>
+    <!--
 <mat-form-field [floatLabel]="'never'">
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
