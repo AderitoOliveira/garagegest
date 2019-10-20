@@ -1,178 +1,35 @@
-<!---
-<p>vehicles works!</p>
-<button (click)="myFunc()">Click Button</button>
--->
 
-<mat-form-field [floatLabel]="'never'">
-  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-</mat-form-field>
-
-<!-- <table class="table table-hover table-condensed">
-    <thead>
-      <tr>
-        <th class="col-md-1" mat-header-cell *matHeaderCellDef mat-sort-header>Matri.</th>
-        <th class="col-md-1">Marca</th>
-        <th class="col-md-1">Modelo</th>
-        <th class="col-md-1">Kms</th>
-        <th class="col-md-1">Cilin.</th>
-        <th class="col-md-1">Data Reg.</th>
-        <th class="col-md-1">Data Fabr.</th>
-        <th class="col-md-4">Nº Chassi</th>
-        <th class="col-md-1">Kwh</th>
-        <th class="col-md-1">Nº cv</th>
-        <th class="col-md-1">Combus.</th>
-        <th class="col-md-1">Data cria.</th>
-        <th class="col-md-1">Data modi.</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let vehicle of dataSource.data">
-        <td class="col-md-1" mat-cell *matCellDef="let vehicle" >{{vehicle.REGISTRATION_PLATE}}</td>
-        <td class="col-md-1">{{vehicle.CAR_BRAND}}</td>
-        <td class="col-md-1">{{vehicle.CAR_MODEL}}</td>
-        <td class="col-md-1">{{vehicle.KMS_REGISTERED}}</td>
-        <td class="col-md-1">{{vehicle.CYLINDER_CAPACITY}}</td>
-        <td class="col-md-1">{{vehicle.REGISTRATION_DATE}}</td>
-        <td class="col-md-1">{{vehicle.FABRICATION_DATE}}</td>
-        <td class="col-md-4">{{vehicle.VEHICLE_IDENTIFICATION_NUMBER}}</td>
-        <td class="col-md-1">{{vehicle.KILLOWATT}}</td>
-        <td class="col-md-1">{{vehicle.HORSEPOWER}}</td>
-        <td class="col-md-1">{{vehicle.FUEL}}</td>
-        <td class="col-md-1">{{vehicle.CREATED_DATE}}</td>
-        <td class="col-md-1">{{vehicle.MODIFIED_DATE}}</td>
-        </tr>
-    </tbody>
-</table> -->
-<div class="vehicle-table-wrap">
-  <div class="vehicle-table-header">
-    <div class="inner-wrap">
-      <div class="row">
-        <div class="col-xs-2 col-md-2 header-order-nr">Matri.</div>
-        <div class="col-xs-2 col-md-2 header-order-client">Marca</div>
-        <div class="col-xs-2 col-md-2 header-order-date">Modelo</div>
-        <div class="col-xs-2 col-md-2 header-order-date-end">Kms</div>
-        <div class="col-xs-2 col-md-2 header-order-products">Cilin.</div>
-        <div class="col-xs-2 col-md-2 header-order-state">Data Reg.</div>
+<div id="resp-table">
+    <div id="resp-table-header">
+      <div class="table-header-cell roundedcornerleft" >Matri.</div>
+      <div class="table-header-cell" >Marca</div>
+      <div class="table-header-cell" >Modelo</div>
+      <div class="table-header-cell" >Kms</div>
+      <div class="table-header-cell" >Cilin.</div>
+      <div class="table-header-cell" >Data Reg.</div>
+      <div class="table-header-cell" >Data Fabr.</div>
+      <div class="table-header-cell" >Nº Chassi</div>
+	    <div class="table-header-cell" >Kwh</div>
+      <div class="table-header-cell" >Nº cv</div>
+      <div class="table-header-cell" >Combus.</div>
+      <div class="table-header-cell" >Data cria.</div>
+      <div class="table-header-cell roundedcornerright" >Data modi.</div>
+    </div>
+    <div id="resp-table-body">
+      <div class="resp-table-row" *ngFor="let vehicle of dataSource.data">
+        <div class="table-body-cell" >{{vehicle.REGISTRATION_PLATE}}</div>
+        <div class="table-body-cell" >{{vehicle.CAR_BRAND}}</div>
+        <div class="table-body-cell" >{{vehicle.CAR_MODEL}}</div>
+        <div class="table-body-cell" >{{vehicle.KMS_REGISTERED}}</div>
+        <div class="table-body-cell" >{{vehicle.CYLINDER_CAPACITY}}</div>
+        <div class="table-body-cell" >{{vehicle.REGISTRATION_DATE}}</div>
+        <div class="table-body-cell" >{{vehicle.FABRICATION_DATE}}</div>
+        <div class="table-body-cell" >{{vehicle.VEHICLE_IDENTIFICATION_NUMBER}}</div>
+		    <div class="table-body-cell" >{{vehicle.KILLOWATT}}</div>
+        <div class="table-body-cell" >{{vehicle.HORSEPOWER}}</div>
+        <div class="table-body-cell" >{{vehicle.FUEL}}</div>
+        <div class="table-body-cell" >{{vehicle.CREATED_DATE}}</div>
+        <div class="table-body-cell" >{{vehicle.MODIFIED_DATE}}</div>
       </div>
     </div>
-  </div>
-  <div id="vehicle-table-row">
-    <!--div class="vehicle-table-wrap"-->
-    <div class="inner-wrap">
-        <div *ngFor="let vehicle of dataSource.data">
-            <div class="row">
-                <div class="col-md-2 item-order-date">{{vehicle.REGISTRATION_PLATE}}</div>
-                <div class="col-md-2 item-order-date">{{vehicle.CAR_BRAND}}</div>
-                <div class="col-md-2 item-order-date">{{vehicle.CAR_MODEL}}</div>
-                <div class="col-md-2 item-order-date">{{vehicle.KMS_REGISTERED}}</div>
-                <div class="col-md-2 item-order-date">{{vehicle.CYLINDER_CAPACITY}}</div>
-                <div class="col-md-2 item-order-date">{{vehicle.REGISTRATION_DATE}}</div>
-               <!-- <div class="col-md-2 table-item item-order-date">{{vehicle.FABRICATION_DATE}}</div>
-                  <div class="col-md-2 table-item item-order-date">{{vehicle.VEHICLE_IDENTIFICATION_NUMBER}}</div>
-                  <div class="col-md-2 table-item item-order-date">{{vehicle.KILLOWATT}}</div>
-                  <div class="col-md-2 table-item item-order-date">{{vehicle.HORSEPOWER}}</div>
-                  <div class="col-md-2 table-item item-order-date">{{vehicle.FUEL}}</div>
-                  <div class="col-md-2 table-item item-order-date">{{vehicle.CREATED_DATE}}</div>
-                  <div class="col-md-2 table-item item-order-date">{{vehicle.MODIFIED_DATE}}</div> -->
-            </div>
-        </div>
-      </div>
-    </div>
-    <!--/div-->
 </div>
-    <!--
-<mat-form-field [floatLabel]="'never'">
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-</mat-form-field>
-  
-  <div class="mat-elevation-z10">
-    <table mat-table [dataSource]="dataSource" matSort>
-  
-      
-      <ng-container matColumnDef="REGISTRATION_PLATE">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Matri. </th>
-        <td mat-cell *matCellDef="let row"> {{row.REGISTRATION_PLATE}} </td>
-      </ng-container>
-  
-      
-      <ng-container matColumnDef="CAR_BRAND">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Marca </th>
-        <td mat-cell *matCellDef="let row"> {{row.CAR_BRAND}} </td>
-      </ng-container>
-
-      
-      <ng-container matColumnDef="CAR_MODEL">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Modelo </th>
-        <td mat-cell *matCellDef="let row"> {{row.CAR_MODEL}} </td>
-      </ng-container>
-
-      
-      <ng-container matColumnDef="KMS_REGISTERED">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Kms </th>
-        <td mat-cell *matCellDef="let row"> {{row.KMS_REGISTERED}} </td>
-      </ng-container>
-
-      
-      <ng-container matColumnDef="CYLINDER_CAPACITY">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Cilin. </th>
-        <td mat-cell *matCellDef="let row"> {{row.CYLINDER_CAPACITY}} </td>
-      </ng-container>
-
-      
-      <ng-container matColumnDef="REGISTRATION_DATE">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Data Reg. </th>
-        <td mat-cell *matCellDef="let row"> {{row.REGISTRATION_DATE}} </td>
-      </ng-container>
-
-      
-      <ng-container matColumnDef="FABRICATION_DATE">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Data Fabr. </th>
-        <td mat-cell *matCellDef="let row"> {{row.FABRICATION_DATE}} </td>
-      </ng-container>
-
-      
-      <ng-container matColumnDef="VEHICLE_IDENTIFICATION_NUMBER">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nº Chassi </th>
-        <td mat-cell *matCellDef="let row"> {{row.VEHICLE_IDENTIFICATION_NUMBER}} </td>
-      </ng-container>
-
-      
-      <ng-container matColumnDef="KILLOWATT">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Kwh </th>
-        <td mat-cell *matCellDef="let row"> {{row.KILLOWATT}} </td>
-      </ng-container>
-
-      
-      <ng-container matColumnDef="HORSEPOWER">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nº cv </th>
-        <td mat-cell *matCellDef="let row"> {{row.HORSEPOWER}} </td>
-      </ng-container>
-
-      
-      <ng-container matColumnDef="FUEL">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Combus. </th>
-        <td mat-cell *matCellDef="let row"> {{row.FUEL}} </td>
-      </ng-container>
-
-      
-      <ng-container matColumnDef="CREATED_DATE">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Data cria. </th>
-        <td mat-cell *matCellDef="let row"> {{row.CREATED_DATE}} </td>
-      </ng-container>
-
-      
-      <ng-container matColumnDef="MODIFIED_DATE">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Data modi.. </th>
-        <td mat-cell *matCellDef="let row"> {{row.MODIFIED_DATE}} </td>
-      </ng-container>
-  
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;">
-      </tr>
-    </table>
-  
-    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
-    </mat-paginator>
-
-</div>
-  -->

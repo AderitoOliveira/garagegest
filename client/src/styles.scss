@@ -1,3 +1,174 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+/*
+* {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+} */
+
+@media screen and (min-width:1200px) and (max-width:1400px){
+    .container{
+        width:1169px;
+    }
+}
+
+@media screen and (min-width:1200px) and (max-width:1400px){
+    .specificContainer{
+        width:1169px;
+        left: 160px;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (min-width:1401px){
+    .specificContainer{
+        width:1480px;
+        left: 160px;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+
+@media screen and (min-width:1401px){
+    .container{
+        width:100%;
+    }
+}
+
+.main {
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+.sidebar {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: rgb(211, 211, 211); /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+.sidebar .sidebar-header{
+    background:transparent;
+    width: 100%;
+    float:  left;
+    padding: 18px 0px;
+    text-align: center;
+}
+
+.header {
+    height: 100px; 
+    width: 100%; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden; 
+    margin-left: 160px;
+    border: rgb(245, 245, 245);
+    border-width: 5px;
+    border-style: solid;
+    z-index: 2;
+}
+
+/*
+.content {
+    height: 100%;
+    width: 90%; 
+    position: fixed; 
+    left: 0;
+    background-color: rgb(255, 255, 255); 
+    overflow-x: hidden; 
+    margin-left: 160px;
+    margin-top: 100px;
+    border: rgb(245, 245, 245);
+    border-width: 5px;
+    border-style: solid;
+} */
+
+.contentDiv {
+    float: left;
+    margin-top: 95px;
+    margin-left: 160px;
+    background: transparent;
+    position: relative;
+    z-index: 0;
+    /*padding-top: 72px;*/
+    padding-bottom: 72px;
+    border-width: 5px;
+    border-style: solid;
+}
+
+#resp-table {
+    width: 100%;
+    display: table;
+    padding: 5px;
+}
+
+#resp-table-header{
+    display: table-header-group;
+    background-color: rgb(223, 226, 221);
+    font-weight: bold;
+    font-size: 13px;
+    .roundedcornerleft {
+        border-collapse: separate;
+        border-left: 0px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        
+    }
+    .roundedcornerright {
+        border-collapse: separate;
+        border-left: 0px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        
+    }
+}
+
+
+.table-header-cell{
+    display: table-cell;
+    text-align: left;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-left: 0px;
+    position: sticky;
+    top: 0;
+    background-color: rgb(223, 226, 221);
+}
+
+#resp-table-body{
+    display: table-row-group;
+    box-sizing: unset !important;
+    font-size: 12px;
+}
+
+.resp-table-row{
+    display: table-row;
+}
+
+.table-body-cell{
+    display: table-cell;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(110, 125, 175);
+    border-bottom-width: 0.5px;
+}

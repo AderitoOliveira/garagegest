@@ -40,13 +40,12 @@
   </div>
 </nav>
 -->
-<div class="wrapper">
+<!--div class="wrapper">
   <nav id="sidebar">
     <ul class="list-unstyled components">
           <li>
               <a class="nav-link" [routerLink] = "'/clients'">
                   <span class="menu-icon-wrap">
-                      <!--img src="assets/icons/menu-clients.svg" width="16px" height="18px"-->
                   </span>
                   Clientes
               </a>
@@ -54,7 +53,6 @@
           <li>
             <a class="nav-link" [routerLink] = "'/vehicles'">
                 <span class="menu-icon-wrap">
-                    <!--img src="assets/icons/menu-clients.svg" width="16px" height="18px"-->
                 </span>
                 Veículos
             </a>
@@ -72,4 +70,42 @@
         </div>
     </div> 
   </div>                  
+</div-->
+<div class="main">
+  <div class="sidebar">
+          <div class="sidebar-header" id="sidebar-header-id">
+              <a href="/">
+                  <img src="assets/logo-wedotechnologies.png" width="156px" height="90px">
+              </a>
+          </div>
+          <a class="nav-link" [routerLink] = "'/clients'">
+            <span class="menu-icon-wrap">
+                <!--img src="assets/icons/menu-clients.svg" width="16px" height="18px"-->
+                <!--img src="https://img.icons8.com/office/16/000000/e-learning.png" width="32px" height="38px"-->
+            </span>
+            Clientes
+        </a>
+          <a class="nav-link" [routerLink] = "'/vehicles'">
+              <span class="menu-icon-wrap">
+                  <!--img src="assets/icons/menu-clients.svg" width="16px" height="18px"-->
+                  <!--img src="https://img.icons8.com/office/16/000000/e-learning.png" width="32px" height="38px"-->
+              </span>
+              Veículos
+          </a>
+  </div>
+  <div class="header">
+
+  </div>
+  <div class="contentDiv">
+    <div class="specificContainer">
+      <div class="row">
+          <div class="col-md-12">
+            <router-outlet></router-outlet>
+          </div>
+      </div>
+    </div> 
+  </div>
+  <!--div class="content">
+    <router-outlet></router-outlet>
+  </div-->
 </div>
