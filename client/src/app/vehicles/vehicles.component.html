@@ -1,5 +1,5 @@
 
-<div id="resp-table">
+<!-- <div id="resp-table">
     <div id="resp-table-header">
       <div class="table-header-cell roundedcornerleft" >Matri.</div>
       <div class="table-header-cell" >Marca</div>
@@ -32,4 +32,57 @@
         <div class="table-body-cell" >{{vehicle.MODIFIED_DATE}}</div>
       </div>
     </div>
+</div> -->
+
+<div id="genericbardiv">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col padding-10">
+              <button type="button" class="btn btn-outline-primary">Success</button>
+          </div>
+          <div class="col-6">
+          </div>
+          <div class="col">
+          </div>
+      </div>
+    </div>
+</div>
+<div id="content-general-container">
+  <div id="generic_row_header" class="shadow-sm p-3">
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-1">Matri.</div>
+            <div class="col-1">Marca</div>
+            <div class="col-1">Modelo</div>
+            <div class="col-1">Kms</div>
+            <div class="col-1">Cilin.</div>
+            <div class="col-1">Data Reg.</div>
+            <div class="col-1">Data Fabr.</div>
+            <div class="col-1">Nº Chassi</div>
+            <div class="col-1">Kwh</div>
+            <div class="col-1">Nº cv</div>
+            <div class="col-1">Combus.</div>
+          </div>
+        </div>
+  </div>
+  <div id="generic_row" class="shadow-sm p-3 bg-white rounded"  *ngFor="let vehicle of dataSource.data">
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-1">{{vehicle.REGISTRATION_PLATE}}</div>
+            <div class="col-1">{{vehicle.CAR_BRAND}}</div>
+            <div class="col-1">{{vehicle.CAR_MODEL}}</div>
+            <div class="col-1">{{vehicle.KMS_REGISTERED}}</div>
+            <div class="col-1">{{vehicle.CYLINDER_CAPACITY}}</div>
+            <div class="col-1">{{vehicle.REGISTRATION_DATE}}</div>
+            <div class="col-1">{{vehicle.FABRICATION_DATE}}</div>
+            <div class="col-1">{{vehicle.VEHICLE_IDENTIFICATION_NUMBER}}</div>
+            <div class="col-1">{{vehicle.KILLOWATT}}</div>
+            <div class="col-1">{{vehicle.HORSEPOWER}}</div>
+            <div class="col-1">{{vehicle.FUEL}}</div>
+            <div id="buttondiv">
+              <i class="btn btn-warning btn-sm button-side-by-side" (click)="delete(vehicle.REGISTRATION_PLATE)">Details</i>
+            </div>
+          </div>
+      </div>
+  </div>
 </div>

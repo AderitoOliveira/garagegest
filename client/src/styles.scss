@@ -331,4 +331,47 @@
     margin-top: 5px;
     height: 60px;
     width: -webkit-fill-available;
+    overflow-y: hidden;
 }
+
+
+/***************************************  CUSTOMER DETAILS   **********************************************/
+#customer_details_container {
+    padding: 5px;
+    background-color: rgb(255, 255, 255); 
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    height: 200px;
+    width: -webkit-fill-available;
+    overflow-y: hidden;
+    .input_style {
+        padding-left: 10px;
+        font-size: 15px;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid black;
+    }
+    .input_style_large {
+        padding-left: 10px;
+        font-size: 15px;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid black;
+        size: 35px;
+    }
+    .row {
+        margin-top: 15px;
+    }
+}
+
+
+#customer_details_container span{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/**********************************************************************************************************/
