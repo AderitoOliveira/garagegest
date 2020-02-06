@@ -1,71 +1,69 @@
-<mat-form-field [floatLabel]="'never'">
+<!-- <mat-form-field [floatLabel]="'never'">
     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
   
   <div class="mat-elevation-z10">
     <table mat-table [dataSource]="dataSource" matSort>
   
-      <!-- ID Column -->
       <ng-container matColumnDef="NAME">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
         <td mat-cell *matCellDef="let row"> {{row.NAME}} </td>
       </ng-container>
   
-      <!-- Progress Column -->
+     
       <ng-container matColumnDef="ADDRESS">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Morada </th>
         <td mat-cell *matCellDef="let row"> {{row.ADDRESS}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+     
       <ng-container matColumnDef="CITY_LOCATION">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Cidade </th>
         <td mat-cell *matCellDef="let row"> {{row.CITY_LOCATION}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+     
       <ng-container matColumnDef="FISCAL_CODE">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> NIF </th>
         <td mat-cell *matCellDef="let row"> {{row.FISCAL_CODE}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+     
       <ng-container matColumnDef="IDENTITY_CARD">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Código Ident. </th>
         <td mat-cell *matCellDef="let row"> {{row.IDENTITY_CARD}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+     
       <ng-container matColumnDef="PHONE_NUMBER">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Num telef. </th>
         <td mat-cell *matCellDef="let row"> {{row.PHONE_NUMBER}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+     
       <ng-container matColumnDef="EMAIL_ADDRESS">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
         <td mat-cell *matCellDef="let row"> {{row.EMAIL_ADDRESS}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+     
       <ng-container matColumnDef="NICKNAME">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Apelido </th>
         <td mat-cell *matCellDef="let row"> {{row.NICKNAME}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+     
       <ng-container matColumnDef="CREATED_DATE">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Data criaç. </th>
         <td mat-cell *matCellDef="let row"> {{row.CREATED_DATE}} </td>
       </ng-container>
 
-      <!-- Progress Column -->
+     
       <ng-container matColumnDef="MODIFIED_DATE">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Data modifi. </th>
         <td mat-cell *matCellDef="let row"> {{row.MODIFIED_DATE}} </td>
       </ng-container>
-  
-      <!-- Action Column -->
+
       <ng-container matColumnDef="ACTIONS">
         <th mat-header-cell  *matHeaderCellDef > Actions </th>
         <td *matCellDef="let row" >
@@ -85,9 +83,9 @@
   
     <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
     </mat-paginator>
-  </div>
+  </div> -->
 
-  <!--div id="resp-table">
+<!--   <div id="resp-table">
     <div id="resp-table-header">
       <div class="table-header-cell roundedcornerleft" >Nome</div>
       <div class="table-header-cell" >Morada</div>
@@ -113,4 +111,52 @@
 		<div class="table-body-cell" >{{customer.MODIFIED_DATE}}</div>
       </div>
     </div>
-</div-->
+</div> -->
+
+<div id="genericbardiv">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col padding-10">
+              <button type="button" class="btn btn-outline-primary">Success</button>
+          </div>
+          <div class="col-6">
+          </div>
+          <div class="col">
+          </div>
+      </div>
+    </div>
+</div>
+<div id="content-general-container">
+  <div id="generic_row_header" class="shadow-sm p-3">
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-2">Nome</div>
+            <div class="col-2">Morada</div>
+            <div class="col-1">Cidade</div>
+            <div class="col-2">NIF</div>
+<!--             <div class="col-1">Código Ident.</div> -->
+            <div class="col-2">Num telef.</div>
+<!--             <div class="col-2">Email</div> -->
+            <div class="col-1">Apelido</div>
+            <div class="col-2">Data criaç.</div>
+<!--             <div class="col-1">Data modifi.</div> -->
+          </div>
+        </div>
+  </div>
+  <div id="generic_row" class="shadow-sm p-3 bg-white rounded"  *ngFor="let customer of dataSource">
+      <div class="container-fluid">
+          <div class="row">
+            <div class="col-2">{{customer.NAME}}</div>
+            <div class="col-2">{{customer.ADDRESS}}</div>
+            <div class="col-1">{{customer.CITY_LOCATION}}</div>
+            <div class="col-2">{{customer.FISCAL_CODE}}</div>
+<!--             <div class="col-1">{{customer.IDENTITY_CARD}}</div> -->
+            <div class="col-2">{{customer.PHONE_NUMBER}}</div>
+<!--             <div class="col-2">{{customer.EMAIL_ADDRESS}}</div> -->
+            <div class="col-1">{{customer.NICKNAME}}</div>
+            <div class="col-2">{{customer.CREATED_DATE}}</div>
+ <!--            <div class="col-1">{{customer.MODIFIED_DATE}}</div> -->
+          </div>
+      </div>
+  </div>
+</div>
