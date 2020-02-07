@@ -5,19 +5,19 @@
                 <span>
                     Nome
                 </span>
-                <input class="input_style" type="text" name="name" value="Norway"><br>
+                <input class="input_style" style="margin-left: 30px;" type="text"  [(ngModel)]="name" autocomplete="off"><br>
             </div>
             <div class="col-3">
                 <span>
                     NIF
                 </span>
-                <input class="input_style" type="text" name="FISCAL_CODE" value="Norway"><br>
+                <input class="input_style" style="margin-left: 18px;" type="text" name="FISCAL_CODE" value="" autocomplete="off"><br>
             </div>
             <div class="col-3">
                 <span>
                     C.Cidadão
                 </span>
-                <input class="input_style" type="text" name="city_location" value="Norway"><br>
+                <input class="input_style" type="text" style="margin-left: 15px;" name="city_location" value="" autocomplete="off"><br>
             </div>
         </div>
         <div class="row">
@@ -25,13 +25,13 @@
                 <span>
                     Morada
                 </span>
-                <input class="input_style_large" size="35" type="text" name="address" value="Norway"><br>
+                <input class="input_style_large" style="margin-left: 18px;" size="35" type="text" name="address" value="" autocomplete="off"><br>
             </div>
             <div class="col-3">
                 <span>
                     Cidade
                 </span>
-                <input class="input_style" type="text" name="city" value="Norway"><br>
+                <input class="input_style" type="text" style="margin-left: 37px;" name="city" value="" autocomplete="off"><br>
             </div>
         </div>
         <div class="row">
@@ -39,13 +39,13 @@
                 <span>
                     Num .Tel
                 </span>
-                <input class="input_style" type="text" name="phone_number" value="Norway"><br>
+                <input class="input_style" style="margin-left: 10px;" type="text" name="phone_number" value="" autocomplete="off"><br>
             </div>
             <div class="col-3">
                 <span>
                     Email
                 </span>
-                <input class="input_style" type="text" name="email" value="Norway"><br>
+                <input class="input_style"  style="margin-left: 5px;" type="text" name="email" value="" autocomplete="off"><br>
             </div>
         </div>
         <div class="row">
@@ -53,13 +53,26 @@
                 <span>
                     Alias
                 </span>
-                <input class="input_style" type="text" name="nickname" value="Norway"><br>
+                <input class="input_style"  style="margin-left: 40px;" type="text" name="nickname" value="" autocomplete="off"><br>
             </div>
             <div class="col-6">
                 <span>
                 Obs.
                 </span>
-                <input class="input_style_large" type="text" name="observations" value="Norway"><br>
+                <input class="input_style_large"  style="margin-left: 13px;" type="text" name="observations" value="" autocomplete="off"><br>
             </div>
         </div>
+        <div class="row">
+            <div class="col-9">
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-sm btn-success float-sm-right">Gravar</button>
+                <button type="button" class="btn btn-sm btn-danger float-sm-right" (click)="goBack()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="customer_details_vehicle_container" class="shadow-sm p-3">
+
 </div>

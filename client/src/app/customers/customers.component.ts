@@ -64,7 +64,8 @@ export class CustomersComponent implements OnInit {
   }
 
   delete(row) {
-      this.router.navigate(['customerdetail']); (3)
+    console.log(row);
+      this.router.navigate(['customerdetail', row], { skipLocationChange: true }); (3)
       //alert(row);
   }
 }

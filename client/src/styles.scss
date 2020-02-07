@@ -167,8 +167,9 @@
 }
 
 .header {
-    height: 100px; 
-    width: 100%; 
+    height: 70px; 
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
     position: fixed; 
     top: 0;
     left: 0;
@@ -188,7 +189,7 @@
 
 .contentDiv {
     float: left;
-    margin-top: 95px;
+    margin-top: 40px;
     margin-left: 160px;
     background: transparent;
     position: relative;
@@ -300,8 +301,8 @@
 #genericbardiv {
     padding: 5px;
     background-color: rgb(255, 255, 255); 
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 5px;
+    margin-top: 40px;
     height: 60px;
     margin-left: 5px;
     margin-right: 5px;
@@ -339,38 +340,59 @@
 #customer_details_container {
     padding: 5px;
     background-color: rgb(255, 255, 255); 
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     margin-left: 5px;
-    margin-top: 5px;
-    height: 200px;
+    margin-top: 40px;
+    height: 250px;
     width: -webkit-fill-available;
     overflow-y: hidden;
     .input_style {
-        padding-left: 10px;
+        /* padding-left: 10px;
         font-size: 15px;
         border: 0;
         outline: 0;
         background: transparent;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid black; */
+        -webkit-border-radius: 5px; //For Safari, etc.
+        -moz-border-radius: 5px; //For Mozilla, etc.
+        border-radius: 5px; //CSS3 Feature
     }
     .input_style_large {
-        padding-left: 10px;
+        /* padding-left: 10px;
         font-size: 15px;
         border: 0;
         outline: 0;
         background: transparent;
         border-bottom: 1px solid black;
-        size: 35px;
+        size: 35px; */
+        -webkit-border-radius: 5px; //For Safari, etc.
+        -moz-border-radius: 5px; //For Mozilla, etc.
+        border-radius: 5px; //CSS3 Feature
     }
     .row {
         margin-top: 15px;
     }
 }
 
+#customer_details_vehicle_container {
+    padding: 5px;
+    background-color: rgb(255, 255, 255); 
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    height: 250px;
+    width: -webkit-fill-available;
+    overflow-y: hidden;
+}
+
 
 #customer_details_container span{
     font-weight: bold;
     font-size: 16px;
+}
+
+.button_area_customer_detail {
+    float: right;
 }
 
 
