@@ -347,27 +347,27 @@
     width: -webkit-fill-available;
     overflow-y: hidden;
     .input_style {
-        /* padding-left: 10px;
-        font-size: 15px;
-        border: 0;
-        outline: 0;
-        background: transparent;
-        border-bottom: 1px solid black; */
-        -webkit-border-radius: 5px; //For Safari, etc.
-        -moz-border-radius: 5px; //For Mozilla, etc.
-        border-radius: 5px; //CSS3 Feature
-    }
-    .input_style_large {
-        /* padding-left: 10px;
+        padding-left: 10px;
         font-size: 15px;
         border: 0;
         outline: 0;
         background: transparent;
         border-bottom: 1px solid black;
-        size: 35px; */
-        -webkit-border-radius: 5px; //For Safari, etc.
+        /* -webkit-border-radius: 5px; //For Safari, etc.
         -moz-border-radius: 5px; //For Mozilla, etc.
-        border-radius: 5px; //CSS3 Feature
+        border-radius: 5px; //CSS3 Feature */
+    }
+    .input_style_large {
+        padding-left: 10px;
+        font-size: 15px;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid black;
+        size: 35px;
+        /* -webkit-border-radius: 5px; //For Safari, etc.
+        -moz-border-radius: 5px; //For Mozilla, etc.
+        border-radius: 5px; //CSS3 Feature */
     }
     .row {
         margin-top: 15px;
