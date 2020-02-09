@@ -347,27 +347,24 @@
     width: -webkit-fill-available;
     overflow-y: hidden;
     .input_style {
-        padding-left: 10px;
-        font-size: 15px;
-        border: 0;
-        outline: 0;
-        background: transparent;
-        border-bottom: 1px solid black;
-        /* -webkit-border-radius: 5px; //For Safari, etc.
-        -moz-border-radius: 5px; //For Mozilla, etc.
-        border-radius: 5px; //CSS3 Feature */
+        padding-left: 5px;
+        margin: 0 .25rem;
+        min-width: 125px;
+        border: 1px solid rgb(155, 201, 245);
+        border-left: 3px solid;
+        border-radius: 5px;
+        transition: border-color .5s ease-out;
+        border-left-color: rgb(177, 10, 10);
     }
     .input_style_large {
-        padding-left: 10px;
-        font-size: 15px;
-        border: 0;
-        outline: 0;
-        background: transparent;
-        border-bottom: 1px solid black;
-        size: 35px;
-        /* -webkit-border-radius: 5px; //For Safari, etc.
-        -moz-border-radius: 5px; //For Mozilla, etc.
-        border-radius: 5px; //CSS3 Feature */
+        padding-left: 5px;
+        margin: 0 .25rem;
+        min-width: 125px;
+        border: 1px solid rgb(155, 201, 245);
+        border-left: 3px solid;
+        border-radius: 5px;
+        transition: border-color .5s ease-out;
+        border-left-color: rgb(177, 10, 10);
     }
     .row {
         margin-top: 15px;
