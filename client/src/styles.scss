@@ -61,7 +61,7 @@
 #sidebar{
     transition: all 0.3s;
     width: 160px;
-    background-color: #e2e2e2;
+    background-color: #ffffff; //#e2e2e2; This is the grey colour
     min-width:160px;
     position: fixed;
     height: 100vh;
@@ -342,10 +342,11 @@
     background-color: rgb(255, 255, 255); 
     margin-bottom: 15px;
     margin-left: 5px;
-    margin-top: 40px;
+    //margin-top: 40px;
     height: 250px;
     width: -webkit-fill-available;
     overflow-y: hidden;
+    font-size: 14px;
     .input_style {
         padding-left: 5px;
         margin: 0 .25rem;
@@ -371,12 +372,22 @@
     }
 }
 
+#customer_details_container_header {
+    margin-top: 40px;
+    margin-left: 5px;
+    height: 50px;
+    width: -webkit-fill-available;
+    background-color: rgb(221, 230, 248);
+    font-size: 18px;
+    font-weight: bold;
+}
+
 #customer_details_vehicle_container {
     padding: 5px;
     background-color: rgb(255, 255, 255); 
     margin-bottom: 5px;
     margin-left: 5px;
-    margin-top: 5px;
+    //margin-top: 5px;
     height: 250px;
     width: -webkit-fill-available;
     overflow-y: hidden;

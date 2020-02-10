@@ -14,6 +14,9 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { CustomersComponent } from './customers/customers.component';
 import { CustomerdetailComponent } from './customers/customerdetail/customerdetail.component';
 
+import { GlobalCommunicationService } from './globalcommunicationservice';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,7 @@ import { CustomerdetailComponent } from './customers/customerdetail/customerdeta
     //MatSortModule,
     //BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [GlobalCommunicationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
