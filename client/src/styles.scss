@@ -180,6 +180,8 @@
     border-width: 5px;
     border-style: solid;
     z-index: 2;
+    border-radius: 4px;
+    box-shadow: inset 0 -1px 2px 0 rgba(0, 0, 0, 0.25);
 }
 
 .bold-red {
@@ -303,7 +305,7 @@
     background-color: rgb(255, 255, 255); 
     margin-bottom: 5px;
     margin-top: 40px;
-    height: 60px;
+    height: 50px;
     margin-left: 5px;
     margin-right: 5px;
     width: -webkit-fill-available;
@@ -323,6 +325,8 @@
     font-weight: bold;
     font-size: 18px;
     width: -webkit-fill-available;
+    border-radius: 4px;
+    box-shadow: inset 0 -1px 2px 0 rgba(0, 0, 0, 0.25);
 } 
 
 #generic_row {
@@ -335,6 +339,13 @@
     overflow-y: hidden;
 }
 
+.page_location {
+    top:50%;
+    margin-top:15px;
+    //padding: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
 
 /***************************************  CUSTOMER DETAILS   **********************************************/
 #customer_details_container {
@@ -351,21 +362,21 @@
         padding-left: 5px;
         margin: 0 .25rem;
         min-width: 125px;
-        border: 1px solid rgb(155, 201, 245);
-        border-left: 3px solid;
+        border: 1px solid rgb(65, 65, 65);
+        border-left:5px solid rgb(230, 36, 22);
         border-radius: 5px;
         transition: border-color .5s ease-out;
-        border-left-color: rgb(177, 10, 10);
+        outline-color: rgb(255, 17, 0);
     }
     .input_style_large {
         padding-left: 5px;
         margin: 0 .25rem;
         min-width: 125px;
-        border: 1px solid rgb(155, 201, 245);
-        border-left: 3px solid;
+        border: 1px solid rgb(65, 65, 65);
+        border-left: 5px solid rgb(230, 36, 22);
         border-radius: 5px;
         transition: border-color .5s ease-out;
-        border-left-color: rgb(177, 10, 10);
+        outline-color: rgb(255, 17, 0);
     }
     .row {
         margin-top: 15px;
@@ -377,7 +388,7 @@
     margin-left: 5px;
     height: 50px;
     width: -webkit-fill-available;
-    background-color: rgb(221, 230, 248);
+    background-color: rgb(218, 218, 218);
     font-size: 18px;
     font-weight: bold;
 }
@@ -403,5 +414,46 @@
     float: right;
 }
 
+.header-actions {
+    border-radius: 4px;
+    height:40px;
+    box-shadow: inset 0 -1px 2px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    border: solid 1px #CACBCC;
+    overflow: hidden;
+}
+
+#actions {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    height:30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #fff;
+
+}
 
 /**********************************************************************************************************/
+
+/**************************************** Search Bar *****************************************************/
+
+/* input[type=text] {
+    width: 150px;
+    height: 40px;
+    top:50%;
+    padding-left: 10px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    border-radius: 5px;
+    border: 1px solid rgb(194, 194, 194);
+    border-left: 10px solid rgb(230, 36, 22) !important;
+    font-size: 16px;
+  } */
+  
+  /* When the input field gets focus, change its width to 100% */
+  /* input[type=text]:focus {
+    width: 100%;
+    outline-color: rgb(255, 17, 0);
+  } */
+
+/*********************************************************************************************************/

@@ -7,6 +7,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/';
 
 import { VehicleService } from './vehicles.service';
+import { GlobalCommunicationService } from '../globalcommunicationservice';
 
 
 @Component({
@@ -26,7 +27,7 @@ export class VehiclesComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  constructor(private httpClient: HttpClient, private vehicleService: VehicleService) { 
+  constructor(private httpClient: HttpClient, private vehicleService: VehicleService,private globalCommunictionService: GlobalCommunicationService) { 
   }
 
   ngOnInit() {
@@ -42,6 +43,7 @@ export class VehiclesComponent implements OnInit {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
       }, 3000); */
+      this.globalCommunictionService.changeData("Lista de todos os Veículos");
 
   }
     

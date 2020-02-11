@@ -5,6 +5,7 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import { Customer } from './customers.model';
 import { CustomerService } from './customers.service';
+import { GlobalCommunicationService } from '../globalcommunicationservice';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class CustomersComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  constructor(private httpClient: HttpClient, private customerService: CustomerService, private router: Router) { }
+  constructor(private httpClient: HttpClient, private customerService: CustomerService, private router: Router, private globalCommunictionService: GlobalCommunicationService) { }
 
   ngOnInit() {
     console.log("Inside ngOnInit");
@@ -33,6 +34,7 @@ export class CustomersComponent implements OnInit {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
       }, 3000); */
+      this.globalCommunictionService.changeData("Lista de todos os Clientes");
   }
 
   getCustomers(): void {
