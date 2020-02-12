@@ -10,13 +10,18 @@ router.get('/', function(req, res, next) {
 
 router.get('/allCustomers', function(req, res, next) {
   //res.send(JSON.stringify({value: 1}));
-  fetchAllCustomers(req, res,);
+  fetchAllCustomers(req, res);
+});
+
+router.get('/filtercustomer/:customerid', function(req, res, next) {
+  //res.send(JSON.stringify({value: 1}));
+  filterCustomer(req, res);
 });
 
 
 router.get('/allVehicles', function(req, res, next) {
   //res.send(JSON.stringify({value: 1}));
-  fetchAllVehicles(req, res,);
+  fetchAllVehicles(req, res);
 });
 
 module.exports = router;

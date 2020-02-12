@@ -339,6 +339,7 @@
     overflow-y: hidden;
 }
 
+//CSS for the NAME of the page where we are located (clientes, vehicles)
 .page_location {
     top:50%;
     margin-top:15px;
@@ -416,16 +417,16 @@
 
 .header-actions {
     border-radius: 4px;
-    height:40px;
+    height:50px;
     box-shadow: inset 0 -1px 2px 0 rgba(0, 0, 0, 0.25);
     background-color: #fff;
     border: solid 1px #CACBCC;
-    overflow: hidden;
+    overflow: hidden;;
 }
 
 #actions {
     margin-top: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     height:30px;
     margin-left: 5px;
     margin-right: 5px;
@@ -437,23 +438,28 @@
 
 /**************************************** Search Bar *****************************************************/
 
-/* input[type=text] {
-    width: 150px;
-    height: 40px;
-    top:50%;
-    padding-left: 10px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    border-radius: 5px;
-    border: 1px solid rgb(194, 194, 194);
-    border-left: 10px solid rgb(230, 36, 22) !important;
-    font-size: 16px;
-  } */
-  
-  /* When the input field gets focus, change its width to 100% */
-  /* input[type=text]:focus {
+.search-wrap {
     width: 100%;
-    outline-color: rgb(255, 17, 0);
-  } */
+    float: left;
+    input {
+        margin:0 auto;
+        width: 100%;
+        float: left;
+        height: 100%;
+        border: none;
+        padding: 14px 4px;
+        position:  relative;
+        z-index: 0;
+        background-color: #fafbfc;
+        box-shadow: inset 2px 0 2px 0 rgba(0, 0, 0, 0.25);
+        font-size: 18px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: rgba(0, 0, 0, 0.75);
+    }
+}
 
 /*********************************************************************************************************/

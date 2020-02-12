@@ -6,6 +6,8 @@ import {MatSort} from '@angular/material/sort';
 import { Customer } from './customers.model';
 import { CustomerService } from './customers.service';
 import { GlobalCommunicationService } from '../globalcommunicationservice';
+import { liveSearch } from '../util/utilfunctions';
+import { Subject } from 'rxjs';
 
 
 @Component({
@@ -22,8 +24,7 @@ export class CustomersComponent implements OnInit {
 
   displayedColumns: string[] = ['NAME', 'ADDRESS', 'CITY_LOCATION', 'FISCAL_CODE', 'IDENTITY_CARD', 'PHONE_NUMBER', 'EMAIL_ADDRESS', 'NICKNAME', 'CREATED_DATE', 'MODIFIED_DATE', 'ACTIONS'];
 
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
+  private customerSubject = new Subject<string>();
 
   constructor(private httpClient: HttpClient, private customerService: CustomerService, private router: Router, private globalCommunictionService: GlobalCommunicationService) { }
 
@@ -53,17 +54,9 @@ export class CustomersComponent implements OnInit {
     console.log(this.httpdata)
   }
 
-  applyFilter(filterValue: string) {
-    this.filterValue = filterValue.trim().toLowerCase();
-
-    console.log(filterValue);
-
-    //this.dataSource.filter = filterValue;
-
-    /* if (this.dataSource) {
-      this.dataSource.paginator.firstPage();
-    } */
-  }
+  readonly customer = this.customerSubject.pipe(
+    liveSearch(customer => this.customerService.filterEids(customer))
+  );
 
   delete(row) {
     console.log(row);

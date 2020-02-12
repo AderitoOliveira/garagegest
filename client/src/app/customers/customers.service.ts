@@ -23,4 +23,11 @@ export class CustomerService {
 
         return this.httpClient.get('http://localhost:3000/allCustomers').pipe(map((res:any) => res)) 
     }
+
+    filterEids(customer: string): Observable<Customer> {
+      
+        console.log("Inside filterEids");
+
+        return this.httpClient.get('http://localhost:3000/filtercustomer/{customer}').pipe(map((res:any) => res)) 
+    }
 }

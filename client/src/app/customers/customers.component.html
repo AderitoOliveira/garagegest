@@ -29,7 +29,7 @@
 							<div class="col-md-6 vert-spacer"></div>
 							<div class="col-md-6">
 								<div class="search-wrap">
-									<input type="text" name="Pesquisa" ng-model="searchChar" placeholder=" Pesquisar">  
+									<input type="text" name="Pesquisa" ng-model="searchChar" placeholder=" Pesquisar"  [(ngModel)]="searchText">  
 								</div>
 							</div>
 						</div>
@@ -56,7 +56,7 @@
           </div>
         </div>
   </div>
-  <div id="generic_row" class="shadow-sm p-3 bg-white rounded"  *ngFor="let customer of dataSource">
+  <div id="generic_row" class="shadow-sm p-3 bg-white rounded"  *ngFor="let customer of dataSource | filter: searchText">
       <div class="container-fluid">
           <div class="row">
             <div class="col-1">{{customer.NAME}}</div>
