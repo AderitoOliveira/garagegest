@@ -10,7 +10,7 @@
     </div>
 </div>
 <div id="customer_details_container" class="shadow-sm p-3">
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
         <div class="row">
             <div class="col-4">
                 <span>
@@ -81,7 +81,63 @@
                 <button type="button" class="btn btn-sm btn-danger float-sm-right" (click)="goBack()">Cancelar</button>
             </div>
         </div>
-    </div>
+    </div> -->
+    <fieldset>
+        <div class='row'>
+            <div class='col-sm-4'>    
+                <div class='form-group font-weight-bold'>
+                    <label for="user_title">Nome</label>
+                    <input class="form-control" id="user_title" name="user[title]" [(ngModel)]="name" size="30" type="text" />
+                </div>
+            </div>
+            <div class='col-sm-4'>
+                <div class='form-group font-weight-bold'>
+                    <label for="user_firstname">NIF</label>
+                    <input class="form-control" id="user_firstname" name="user[firstname]" required="true" size="30" type="text" />
+                </div>
+            </div>
+            <div class='col-sm-4'>
+                <div class='form-group font-weight-bold'>
+                    <label for="identity_card">Cartão Cidadão</label>
+                    <input class="form-control" id="identity_card" name="user[identity_card]" required="true" size="30" type="text" />
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-sm-4'>    
+                <div class='form-group font-weight-bold'>
+                    <label for="phone_number">Número Telefone</label>
+                    <input class="form-control" id="phone_number" name="user[phone_number]" size="30" type="text" />
+                </div>
+            </div>
+            <div class='col-sm-4'>
+                <div class='form-group font-weight-bold'>
+                    <label for="email">Email</label>
+                    <input class="form-control" id="email" name="user[email]" required="true" size="30" type="text" />
+                </div>
+            </div>
+            <div class='col-sm-4'>
+                <div class='form-group font-weight-bold'>
+                    <label for="alias">Alias</label>
+                    <input class="form-control" id="alias" name="user[alias]" required="true" size="30" type="text" />
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-sm-6'>
+                <div class='form-group font-weight-bold'>
+                    <label for="address">Morada</label>
+                    <input class="form-control required address" id="address" name="user[address]" required="true" size="30" type="text" />
+                </div>
+            </div>
+            <div class='col-sm-4'>
+                <div class='form-group font-weight-bold'>
+                    <label for="city">Cidade</label>
+                    <input class="form-control required city" id="city" name="user[city]" required="true" size="30" type="text" />
+                </div>
+            </div>
+        </div>
+    </fieldset>
 </div>
 
 <div id="customer_details_container_header" class="shadow-sm p-3">
