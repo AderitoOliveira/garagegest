@@ -3,10 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; 
 import { HttpModule } from '@angular/http';
 
-import { MatFormFieldModule, MatInputModule, MatPaginatorModule, MatTableModule, MatSortModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
-
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,13 +31,8 @@ import { VehicleDetailComponent } from './vehicles/vehicle-detail/vehicle-detail
     AppRoutingModule,
     HttpClientModule,
     HttpModule,
-    FormsModule
-    //MatFormFieldModule, 
-    //MatInputModule, 
-    //MatPaginatorModule, 
-    //MatTableModule, 
-    //MatSortModule,
-    //BrowserAnimationsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [GlobalCommunicationService],
   bootstrap: [AppComponent]

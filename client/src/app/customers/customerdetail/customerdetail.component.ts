@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs/operators';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GlobalCommunicationService } from './../../globalcommunicationservice';
 import { Vehicle } from './../../vehicles/vehicles.model';
@@ -31,8 +30,10 @@ export class CustomerdetailComponent implements OnInit {
   MODIFIED_DATE = '';
 
   httpdata = null;
-  dataSource = <Vehicle> (this.httpdata);
-  //dataSource = null;
+  //dataSource = <Vehicle> (this.httpdata);
+  dataSource : [Vehicle];
+  dataSource_size : number = 0;
+  
 
   constructor(private route: ActivatedRoute,  private customerDetailService: CustomerDetailService, private router: Router, private globalCommunictionService: GlobalCommunicationService) {
     this.route.params.subscribe( params => {
@@ -48,8 +49,6 @@ export class CustomerdetailComponent implements OnInit {
       this.EMAIL_ADDRESS    = params.EMAIL_ADDRESS;
       this.NICKNAME         = params.NICKNAME;
 
-
-      
     });
 
    }
@@ -68,11 +67,14 @@ export class CustomerdetailComponent implements OnInit {
   getCustomerVehicleDetail(client_id: number): void {
     this.customerDetailService.getCustomerVehicleDetails(client_id).subscribe(data => {
       console.log(data); 
-      this.dataSource = data as any;
-
-      //this.dataSource.paginator = this.paginator;
-      //this.dataSource.sort = this.sort;
+      this.dataSource = data;
+      this.dataSource_size = this.dataSource.length;
     });
+  }
+
+  vehicleDetails(row) {
+    console.log(row);
+      this.router.navigate(['vehicledetail', row], { skipLocationChange: true }); (3)
   }
 
   goBack() {

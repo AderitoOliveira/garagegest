@@ -8,7 +8,6 @@ import { map } from 'rxjs/operators';
 export class CustomerDetailService {
  
     httpdata = null;
-
     constructor(private httpClient: HttpClient) { }
    
     getCustomerVehicleDetails(customer: number): Observable<null> {
