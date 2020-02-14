@@ -152,5 +152,31 @@
     </div>
 </div>
 <div id="customer_details_vehicle_container" class="shadow-sm p-3">
-
+    <div id="generic_row_header" class="shadow-sm p-3">
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-2">Matrícula</div>
+              <div class="col-2">Marca</div>
+              <div class="col-2">Modelo</div>
+              <div class="col-1">Kms</div>
+              <div class="col-2">Cilindrada</div>
+              <div class="col-2">Combustível</div>
+            </div>
+          </div>
+    </div>
+    <div id="generic_row" class="shadow-sm p-3 bg-white rounded" *ngFor="let vehicle of dataSource | filter: searchText">
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-2">{{vehicle.REGISTRATION_PLATE}}</div>
+              <div class="col-2">{{vehicle.CAR_BRAND}}</div>
+              <div class="col-2">{{vehicle.CAR_MODEL}}</div>
+              <div class="col-1">{{vehicle.KMS_REGISTERED}}</div>
+              <div class="col-2">{{vehicle.CYLINDER_CAPACITY}}</div>
+              <div class="col-2">{{vehicle.FUEL}}</div>
+              <div id="buttondiv">
+                <i class="btn btn-warning btn-sm button-side-by-side" (click)="delete(vehicle.REGISTRATION_PLATE)">Details</i>
+              </div>
+            </div>
+        </div>
+    </div>
 </div>
