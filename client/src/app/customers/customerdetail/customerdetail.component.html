@@ -10,96 +10,24 @@
     </div>
 </div>
 <div id="customer_details_container" class="shadow-sm p-3">
-    <!-- <div class="container-fluid">
-        <div class="row">
-            <div class="col-4">
-                <span>
-                    Nome
-                </span>
-                <input class="input_style" style="margin-left: 30px;" size="35" type="text"  [(ngModel)]="name" autocomplete="off"><br>
-            </div>
-            <div class="col-4">
-                <span>
-                    NIF
-                </span>
-                <input class="input_style" style="margin-left: 18px;" size="35" type="text" name="FISCAL_CODE" value="" autocomplete="off"><br>
-            </div>
-            <div class="col-4">
-                <span>
-                    C.Cidadão
-                </span>
-                <input class="input_style" type="text" style="margin-left: 15px;" name="city_location" value="" autocomplete="off"><br>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-8">
-                <span>
-                    Morada
-                </span>
-                <input class="input_style_large" style="margin-left: 18px;" size="61" type="text" name="address" value="" autocomplete="off"><br>
-            </div>
-            <div class="col-4">
-                <span>
-                    Cidade
-                </span>
-                <input class="input_style" type="text" style="margin-left: 37px;" name="city" value="" autocomplete="off"><br>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <span>
-                    Num .Tel
-                </span>
-                <input class="input_style" style="margin-left: 10px;" type="text" name="phone_number" value="" autocomplete="off"><br>
-            </div>
-            <div class="col-4">
-                <span>
-                    Email
-                </span>
-                <input class="input_style"  style="margin-left: 5px;" size="35" type="text" name="email" value="" autocomplete="off"><br>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <span>
-                    Alias
-                </span>
-                <input class="input_style"  style="margin-left: 40px;" type="text" name="nickname" value="" autocomplete="off"><br>
-            </div>
-            <div class="col-4">
-                <span>
-                Obs.
-                </span>
-                <input class="input_style_large"  style="margin-left: 13px;" size="35" type="text" name="observations" value="" autocomplete="off"><br>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-9">
-            </div>
-            <div class="col-3">
-                <button type="button" class="btn btn-sm btn-success float-sm-right">Gravar</button>
-                <button type="button" class="btn btn-sm btn-danger float-sm-right" (click)="goBack()">Cancelar</button>
-            </div>
-        </div>
-    </div> -->
     <fieldset>
         <div class='row'>
             <div class='col-sm-4'>    
                 <div class='form-group font-weight-bold'>
                     <label for="user_title">Nome</label>
-                    <input class="form-control" id="user_title" name="user[title]" [(ngModel)]="name" size="30" type="text" />
+                    <input class="form-control" id="user_title" name="user[title]" [(ngModel)]="NAME" size="30" type="text" />
                 </div>
             </div>
             <div class='col-sm-4'>
                 <div class='form-group font-weight-bold'>
                     <label for="user_firstname">NIF</label>
-                    <input class="form-control" id="user_firstname" name="user[firstname]" required="true" size="30" type="text" />
+                    <input class="form-control" id="user_firstname" name="user[firstname]" required="true" [(ngModel)]="FISCAL_CODE" size="30" type="text" />
                 </div>
             </div>
             <div class='col-sm-4'>
                 <div class='form-group font-weight-bold'>
                     <label for="identity_card">Cartão Cidadão</label>
-                    <input class="form-control" id="identity_card" name="user[identity_card]" required="true" size="30" type="text" />
+                    <input class="form-control" id="identity_card" name="user[identity_card]" required="true" [(ngModel)]="IDENTITY_CARD"  size="30" type="text" />
                 </div>
             </div>
         </div>
@@ -107,19 +35,19 @@
             <div class='col-sm-4'>    
                 <div class='form-group font-weight-bold'>
                     <label for="phone_number">Número Telefone</label>
-                    <input class="form-control" id="phone_number" name="user[phone_number]" size="30" type="text" />
+                    <input class="form-control" id="phone_number" name="user[phone_number]" [(ngModel)]="PHONE_NUMBER" size="30" type="text" />
                 </div>
             </div>
             <div class='col-sm-4'>
                 <div class='form-group font-weight-bold'>
                     <label for="email">Email</label>
-                    <input class="form-control" id="email" name="user[email]" required="true" size="30" type="text" />
+                    <input class="form-control" id="email" name="user[email]" required="true" [(ngModel)]="EMAIL_ADDRESS" size="30" type="text" />
                 </div>
             </div>
             <div class='col-sm-4'>
                 <div class='form-group font-weight-bold'>
                     <label for="alias">Alias</label>
-                    <input class="form-control" id="alias" name="user[alias]" required="true" size="30" type="text" />
+                    <input class="form-control" id="alias" name="user[alias]" required="true" [(ngModel)]="NICKNAME" size="30" type="text" />
                 </div>
             </div>
         </div>
@@ -127,13 +55,13 @@
             <div class='col-sm-6'>
                 <div class='form-group font-weight-bold'>
                     <label for="address">Morada</label>
-                    <input class="form-control required address" id="address" name="user[address]" required="true" size="30" type="text" />
+                    <input class="form-control required address" id="address" name="user[address]" required="true" [(ngModel)]="ADDRESS" size="30" type="text" />
                 </div>
             </div>
             <div class='col-sm-4'>
                 <div class='form-group font-weight-bold'>
                     <label for="city">Cidade</label>
-                    <input class="form-control required city" id="city" name="user[city]" required="true" size="30" type="text" />
+                    <input class="form-control required city" id="city" name="user[city]" required="true" [(ngModel)]="CITY_LOCATION"  size="30" type="text" />
                 </div>
             </div>
         </div>
@@ -176,6 +104,18 @@
               <div id="buttondiv">
                 <i class="btn btn-warning btn-sm button-side-by-side" (click)="delete(vehicle.REGISTRATION_PLATE)">Details</i>
               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="customer_details_container_header" class="shadow-sm p-3  bottom-margin">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <span>
+                    Conta Actual do Cliente
+                </span>
             </div>
         </div>
     </div>

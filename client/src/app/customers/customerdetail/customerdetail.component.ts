@@ -16,8 +16,19 @@ import { CustomerDetailService } from './customerdetail.service';
 export class CustomerdetailComponent implements OnInit {
 
   headerName = 'Customer Detail';
-  name = '';
   customer_detail:  any;
+
+  CLIENT_ID     = '';
+  NAME          = '';
+  ADDRESS       = '';
+  CITY_LOCATION = '';
+  FISCAL_CODE   = '';
+  IDENTITY_CARD = '';
+  PHONE_NUMBER  = '';
+  EMAIL_ADDRESS = '';
+  NICKNAME      = '';
+  CREATED_DATE  = '';
+  MODIFIED_DATE = '';
 
   httpdata = null;
   dataSource = <Vehicle> (this.httpdata);
@@ -26,8 +37,19 @@ export class CustomerdetailComponent implements OnInit {
   constructor(private route: ActivatedRoute,  private customerDetailService: CustomerDetailService, private router: Router, private globalCommunictionService: GlobalCommunicationService) {
     this.route.params.subscribe( params => {
       console.log(params);
-      this.customer_detail = params as any;
-      this.name = params.NAME;
+      this.customer_detail  = params as any;
+      this.CLIENT_ID        = params.CLIENT_ID;
+      this.NAME             = params.NAME;
+      this.ADDRESS          = params.ADDRESS;
+      this.CITY_LOCATION    = params.CITY_LOCATION;
+      this.FISCAL_CODE      = params.FISCAL_CODE;
+      this.IDENTITY_CARD    = params.IDENTITY_CARD;
+      this.PHONE_NUMBER     = params.PHONE_NUMBER;
+      this.EMAIL_ADDRESS    = params.EMAIL_ADDRESS;
+      this.NICKNAME         = params.NICKNAME;
+
+
+      
     });
 
    }

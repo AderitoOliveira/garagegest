@@ -58,7 +58,7 @@ export class CustomersComponent implements OnInit {
     liveSearch(customer => this.customerService.filterEids(customer))
   );
 
-  delete(row) {
+  customerDetails(row) {
     console.log(row);
       this.router.navigate(['customerdetail', row], { skipLocationChange: true }); (3)
       //alert(row);

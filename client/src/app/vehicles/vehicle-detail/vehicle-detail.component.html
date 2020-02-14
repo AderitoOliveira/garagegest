@@ -1,0 +1,87 @@
+<div id="customer_details_container_header" class="shadow-sm p-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <span>
+                    Detalhes do Veículo
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="vehicle_details_container" class="shadow-sm p-3">
+    <fieldset>
+        <div class='row'>
+            <div class='col-sm-3'>    
+                <div class='form-group font-weight-bold'>
+                    <label for="registration_plate">Matrícula</label>
+                    <input class="form-control" id="registration_plate" name="user[registration_plate]" [(ngModel)]="REGISTRATION_PLATE" size="30" type="text" />
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group font-weight-bold'>
+                    <label for="car_brand">Marca</label>
+                    <input class="form-control" id="car_brand" name="user[car_brand]" required="true" [(ngModel)]="CAR_BRAND" size="30" type="text" />
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group font-weight-bold'>
+                    <label for="car_model">Modelo</label>
+                    <input class="form-control" id="car_model" name="user[car_model]" required="true" [(ngModel)]="CAR_MODEL" size="30" type="text" />
+                </div>
+            </div>
+            <div class='col-sm-3'>    
+                <div class='form-group font-weight-bold'>
+                    <label for="kms_registered">Kms Registados</label>
+                    <input class="form-control" id="kms_registered" name="user[phone_number]" [(ngModel)]="KMS_REGISTERED" size="30" type="text" />
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-sm-3'>
+                <div class='form-group font-weight-bold'>
+                    <label for="cilinder_capacity">Cilindrada</label>
+                    <input class="form-control" id="cilinder_capacity" name="user[email]" required="true" [(ngModel)]="CYLINDER_CAPACITY" size="30" type="text" />
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group font-weight-bold'>
+                    <label for="vehicle_identification_number">Número Chassi</label>
+                    <input class="form-control" id="vehicle_identification_number" name="user[alias]" required="true" [(ngModel)]="VEHICLE_IDENTIFICATION_NUMBER" size="30" type="text" />
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group font-weight-bold'>
+                    <label for="killowatt">Killowatt</label>
+                    <input class="form-control" id="killowatt" name="user[alias]" required="true" [(ngModel)]="KILLOWATT" size="30" type="text" />
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class='form-group font-weight-bold'>
+                    <label for="horsepower">Potência</label>
+                    <input class="form-control" id="horsepower" name="user[alias]" required="true" [(ngModel)]="HORSEPOWER" size="30" type="text" />
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-sm-4'>
+                <div class='form-group font-weight-bold'>
+                    <label for="registration_date">Data de Registo</label>
+                    <input class="form-control required address" id="registration_date" name="user[address]" required="true" [(ngModel)]="REGISTRATION_DATE" size="30" type="text" />
+                </div>
+            </div>
+            <div class='col-sm-4'>
+                <div class='form-group font-weight-bold'>
+                    <label for="fabrication_date">Data de Fabrico</label>
+                    <input class="form-control required city" id="fabrication_date" name="user[city]" required="true" [(ngModel)]="FABRICATION_DATE" size="30" type="text" />
+                </div>
+            </div>
+            <div class='col-sm-4'>
+                <div class='form-group font-weight-bold'>
+                    <label for="fuel">Combustível</label>
+                    <input class="form-control required city" id="fuel" name="user[city]" required="true" [(ngModel)]="FUEL" size="30" type="text" />
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

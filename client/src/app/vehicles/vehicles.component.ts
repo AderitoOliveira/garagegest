@@ -4,7 +4,7 @@ import { Vehicle } from './vehicles.model';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
-import {MatFormFieldModule} from '@angular/material/';
+import { Router } from '@angular/router';
 
 import { VehicleService } from './vehicles.service';
 import { GlobalCommunicationService } from '../globalcommunicationservice';
@@ -27,7 +27,7 @@ export class VehiclesComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  constructor(private httpClient: HttpClient, private vehicleService: VehicleService,private globalCommunictionService: GlobalCommunicationService) { 
+  constructor(private router: Router,  private vehicleService: VehicleService,private globalCommunictionService: GlobalCommunicationService) { 
   }
 
   ngOnInit() {
@@ -60,9 +60,6 @@ export class VehiclesComponent implements OnInit {
 
     this.dataSource.filter = filterValue;
 
-    /* if (this.dataSource) {
-      this.dataSource.paginator.firstPage();
-    } */
   }
 
   getVehicles(): void {
@@ -75,16 +72,10 @@ export class VehiclesComponent implements OnInit {
     });
   }
 
-  myFunc(){
-    alert("Button Clicked!!!!!");
-    /* this.httpClient.get('http://localhost:3000/xpto').subscribe((res)=>{
-      //console.log(res);
-      alert(res);
-    }); */
-    this.httpClient.get('http://localhost:3000/allclients').subscribe((data)=>{
-      console.log(data);
-      //alert(res);
-    });
+  vehicleDetails(row) {
+    console.log(row);
+      this.router.navigate(['vehicledetail', row], { skipLocationChange: true }); (3)
   }
+
 
 }

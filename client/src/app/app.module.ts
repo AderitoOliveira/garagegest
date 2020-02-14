@@ -16,6 +16,7 @@ import { CustomerdetailComponent } from './customers/customerdetail/customerdeta
 
 import { GlobalCommunicationService } from './globalcommunicationservice';
 import { FilterPipe } from '../app/util/pipemodule';
+import { VehicleDetailComponent } from './vehicles/vehicle-detail/vehicle-detail.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FilterPipe } from '../app/util/pipemodule';
     VehiclesComponent,
     CustomersComponent,
     CustomerdetailComponent,
-    FilterPipe
+    FilterPipe,
+    VehicleDetailComponent
   ],
   imports: [
     BrowserModule,
