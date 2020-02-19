@@ -30,34 +30,34 @@
   <div id="generic_row_header" class="shadow-sm p-3">
       <div class="container-fluid">
           <div class="row">
-            <div class="col-1">Matri.</div>
-            <div class="col-1">Marca</div>
-            <div class="col-1">Modelo</div>
-            <div class="col-1">Kms</div>
+            <div class="col-2">Matri.</div>
+            <div class="col-2">Marca</div>
+            <div class="col-2">Modelo</div>
+            <div class="col-2">Kms</div>
             <div class="col-1">Cilin.</div>
-            <div class="col-1">Data Reg.</div>
+<!--             <div class="col-1">Data Reg.</div>
             <div class="col-1">Data Fabr.</div>
             <div class="col-1">Nº Chassi</div>
             <div class="col-1">Kwh</div>
-            <div class="col-1">Nº cv</div>
-            <div class="col-1">Combus.</div>
+            <div class="col-1">Nº cv</div> -->
+            <div class="col-2">Combus.</div>
           </div>
         </div>
   </div>
   <div id="generic_row" class="shadow-sm p-3 bg-white rounded"  *ngFor="let vehicle of dataSource | filter: searchText">
       <div class="container-fluid">
           <div class="row">
-            <div class="col-1">{{vehicle.REGISTRATION_PLATE}}</div>
-            <div class="col-1">{{vehicle.CAR_BRAND}}</div>
-            <div class="col-1">{{vehicle.CAR_MODEL}}</div>
-            <div class="col-1">{{vehicle.KMS_REGISTERED}}</div>
+            <div class="col-2">{{vehicle.REGISTRATION_PLATE}}</div>
+            <div class="col-2">{{vehicle.CAR_BRAND}}</div>
+            <div class="col-2">{{vehicle.CAR_MODEL}}</div>
+            <div class="col-2">{{vehicle.KMS_REGISTERED}}</div>
             <div class="col-1">{{vehicle.CYLINDER_CAPACITY}}</div>
-            <div class="col-1">{{vehicle.REGISTRATION_DATE}}</div>
+<!--             <div class="col-1">{{vehicle.REGISTRATION_DATE}}</div>
             <div class="col-1">{{vehicle.FABRICATION_DATE}}</div>
             <div class="col-1">{{vehicle.VEHICLE_IDENTIFICATION_NUMBER}}</div>
             <div class="col-1">{{vehicle.KILLOWATT}}</div>
-            <div class="col-1">{{vehicle.HORSEPOWER}}</div>
-            <div class="col-1">{{vehicle.FUEL}}</div>
+            <div class="col-1">{{vehicle.HORSEPOWER}}</div> -->
+            <div class="col-2">{{vehicle.FUEL}}</div>
             <div id="buttondiv">
               <i class="btn btn-warning btn-sm button-side-by-side" (click)="vehicleDetails(vehicle)">Details</i>
             </div>
