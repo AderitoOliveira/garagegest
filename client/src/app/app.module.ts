@@ -15,7 +15,7 @@ import { CustomerdetailComponent } from './customers/customerdetail/customerdeta
 import { GlobalCommunicationService } from './globalcommunicationservice';
 import { FilterPipe } from '../app/util/pipemodule';
 import { VehicleDetailComponent } from './vehicles/vehicle-detail/vehicle-detail.component';
-import { VehicleRepairDetailComponent } from './vehicle-repair-detail/vehicle-repair-detail.component';
+import { VehicleRepairDetailComponent } from './vehicles/vehicle-repair-detail/vehicle-repair-detail.component';
 
 
 @NgModule({
