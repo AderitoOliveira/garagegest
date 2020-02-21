@@ -84,7 +84,6 @@ fetchVehicleRepairInfo = function(data, callback) {
         callback.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
         callback.end(JSON.stringify(rows));
         callback = rows;
-        console.log(rows);
         console.log("GET VEHICLE REPAIR HEADER INFO");   
 
     });
