@@ -2,14 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GlobalCommunicationService } from './../../globalcommunicationservice';
 
+import { VehicleService } from './vehicle-detail.service';
+import { VehicleRepair } from './../vehicle-repair/vehicle-repair.model';
+
+
 @Component({
   selector: 'app-vehicle-detail',
   templateUrl: './vehicle-detail.component.html',
-  styleUrls: ['./vehicle-detail.component.scss']
+  styleUrls: ['./vehicle-detail.component.scss'],
+  providers: [VehicleService]
 })
 export class VehicleDetailComponent implements OnInit {
 
+  httpdata = null;
+  filterValue = null;
+  dataSource_size : number = 0;
+  dataSource = <VehicleRepair> (this.httpdata);
+
   vehicle_detail:  any;
+  VEHICLE_ID                    = '';
   CLIENT_ID                     = '';
   REGISTRATION_PLATE            = '';
   CAR_BRAND                     = '';
@@ -25,10 +36,11 @@ export class VehicleDetailComponent implements OnInit {
   CREATED_DATE                  = '';
   MODIFIED_DATE                 = '';
 
-  constructor(private route: ActivatedRoute, private globalCommunictionService: GlobalCommunicationService) { 
+  constructor(private route: ActivatedRoute, private globalCommunictionService: GlobalCommunicationService, private vehicleservice: VehicleService) { 
     this.route.params.subscribe( params => {
       console.log(params);
       this.vehicle_detail                 = params as any;
+      this.VEHICLE_ID                     = params.VEHICLE_ID;
       this.REGISTRATION_PLATE             = params.REGISTRATION_PLATE;
       this.CLIENT_ID                      = params.CLIENT_ID;
       this.CAR_BRAND                      = params.CAR_BRAND;
@@ -46,6 +58,15 @@ export class VehicleDetailComponent implements OnInit {
 
   ngOnInit() {
     this.globalCommunictionService.changeData("Detalhes do Veículo " + this.vehicle_detail.REGISTRATION_PLATE);
+    this.getVehicleRepairInfo(this.vehicle_detail.VEHICLE_ID);
+  }
+
+  getVehicleRepairInfo(vehicleid:number): void {
+    this.vehicleservice.getVehiclesRepair(vehicleid).subscribe(data => {
+      console.log(data); 
+      this.dataSource = data;
+      this.dataSource_size = this.dataSource.length;
+    });
   }
 
 }

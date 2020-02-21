@@ -70,3 +70,23 @@ fetchAllVehicles = function(data, callback) {
     });
 
 }
+
+//GET VEHICLE REPAIR HEADER INFO
+fetchVehicleRepairInfo = function(data, callback) {
+    console.log(data);
+    console.log(data.params.vehicleid);
+    con.query('SELECT * FROM VEHICLE_REPAIR where VEHICLE_ID = ?', [data.params.vehicleid],function(err, rows) {
+        if (err) {
+            throw err;
+        } else
+        callback.setHeader('Content-Type', 'application/json');
+        callback.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+        callback.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+        callback.end(JSON.stringify(rows));
+        callback = rows;
+        console.log(rows);
+        console.log("GET VEHICLE REPAIR HEADER INFO");   
+
+    });
+
+}
