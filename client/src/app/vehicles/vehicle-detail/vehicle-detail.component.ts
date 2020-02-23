@@ -36,7 +36,7 @@ export class VehicleDetailComponent implements OnInit {
   CREATED_DATE                  = '';
   MODIFIED_DATE                 = '';
 
-  constructor(private route: ActivatedRoute, private globalCommunictionService: GlobalCommunicationService, private vehicleservice: VehicleService) { 
+  constructor(private router: Router, private route: ActivatedRoute, private globalCommunictionService: GlobalCommunicationService, private vehicleservice: VehicleService) { 
     this.route.params.subscribe( params => {
       console.log(params);
       this.vehicle_detail                 = params as any;
@@ -67,6 +67,12 @@ export class VehicleDetailComponent implements OnInit {
       this.dataSource = data;
       this.dataSource_size = this.dataSource.length;
     });
+  }
+
+  vehicleRepairDetails(row) {
+    console.log(row);
+      this.router.navigate(['vehiclerepairdetail', row], { skipLocationChange: true }); (3)
+      //alert(row);
   }
 
 }
