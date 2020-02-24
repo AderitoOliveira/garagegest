@@ -1,35 +1,82 @@
-<div id="customer_details_container_header" class="shadow-sm p-3">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4">
-                <span>
-                    Detalhes da Reparação do Veículo {{VEHICLE_ID}}
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
 <div id="vehicle_details_container" class="shadow-sm">
     <div class="container-fluid">
         <div class="row">
             <div id="vehicle-area" class="col-5">
-                <span>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 title">
+                            <span>
+                                Informação do Veículo
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class='form-group font-weight-bold'>
+                                <label for="registration_plate">Marca</label>
+                                <input class="form-control-sm" id="brand" name="user[brand]" [(ngModel)]="BRAND" size="10" type="text" />
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class='form-group font-weight-bold'>
+                                <label for="registration_plate">Modelo</label>
+                                <input class="form-control-sm" id="model" name="user[model]" [(ngModel)]="MODEL" size="10" type="text" />
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class='form-group font-weight-bold'>
+                                <label for="registration_plate">Matrícula</label>
+                                <input class="form-control-sm" id="LICENSE_PLATE" name="user[LICENSE_PLATE]" [(ngModel)]="LICENSE_PLATE" size="10" type="text" />
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class='form-group font-weight-bold'>
+                                <label for="registration_plate">Km's revisão</label>
+                                <input class="form-control-sm" id="KMS_REGISTERED" name="user[KMS_REGISTERED]" [(ngModel)]="KMS_REGISTERED" size="10" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <span>
                     Detalhes do Veículo
                     Marca / Modelo
                     Matricula
                     Km's na reparação
-                </span>
+                </span> -->
             </div>
             <div class="col-2">
 
             </div>
             <div id="client-area" class="col-5">
-                <span>
-                    Detalhes do Cliente
-                    Nome
-                    Morada
-                    NIF
-                </span>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 title">
+                            <span>
+                                Informação do Cliente
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class='form-group font-weight-bold'>
+                                <label for="name">Nome</label>
+                                <input class="form-control-sm" id="NAME" name="user[NAME]" [(ngModel)]="NAME" size="10" type="text" />
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class='form-group font-weight-bold'>
+                                <label for="address">Morada</label>
+                                <input class="form-control-sm" id="ADDRESS" name="user[ADDRESS]" [(ngModel)]="ADDRESS" size="10" type="text" />
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class='form-group font-weight-bold'>
+                                <label for="nif">NIF</label>
+                                <input class="form-control-sm" id="FISCAL_CODE" name="user[FISCAL_CODE]" [(ngModel)]="FISCAL_CODE" size="10" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -58,7 +105,7 @@
         </div> -->
 
 
-        <table class="table table-striped table-bordered">    
+        <table class="table table-striped table-bordered" style="margin-top: 80px;">    
             <thead>    
                 <tr>    
                     <th style="width: 5%"></th>    

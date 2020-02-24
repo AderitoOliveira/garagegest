@@ -17,6 +17,10 @@ export class VehicleRepairDetailComponent implements OnInit {
   vehicle_detail:  any;
   VEHICLE_ID = 0;
   REPAIR_ID  = 0;
+  BRAND      = 'VOLVO';
+  MODEL      = 'S40';
+  LICENSE_PLATE = '15-47-ZA';
+  KMS_REGISTERED = 120000;
   httpdata = null;
   dynamicArray: Array<RepairDetailLine> = []; 
   //dynamicArray = <RepairDetailLine> (this.httpdata);

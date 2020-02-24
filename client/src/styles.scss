@@ -344,7 +344,7 @@
 .page_location {
     top:50%;
     margin-top:15px;
-    //padding: 50px;
+    margin-left: 0px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -526,15 +526,29 @@
 /***************************************  VEHICLE REPAIR DETAILS   ****************************************/
 
 #vehicle-area {
-    height: 80px;
+    height: 160px;
     width:60px;
     border-style: dotted;
+    margin-top: 50px;
+    .title{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
 }
 
 #client-area {
-    height: 80px;
+    height: 160px;
     width: 60px;
     border-style: dotted;
+    margin-top: 50px;
+    .title{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
 }
 
 #fields-row-area {
