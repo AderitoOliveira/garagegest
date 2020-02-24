@@ -17,6 +17,13 @@ router.get('/customerVehicleDetails/:customerid', function(req, res, next) {
   fetchcustomerVehicleDetails(req, res);
 });
 
+//GET CUSTOMER VEHICLE REPAIR DETAILS
+router.get('/customerVehicleRepairDetail', function(req, res, next) {
+  console.log("INDEX.js : fetchcustomerVehicleRepairDetail");
+  console.log(req.params);
+  fetchcustomerVehicleRepairDetail(req, res);
+});
+
 //FILTER CUSTOMER
 router.get('/filtercustomer/:customerid', function(req, res, next) {
   filterCustomer(req, res);

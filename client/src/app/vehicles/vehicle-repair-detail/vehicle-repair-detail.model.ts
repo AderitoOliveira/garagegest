@@ -11,3 +11,9 @@ export class VehicleRepairDetail {
     ) { }
   }
   
+  export class RepairDetailLine{     
+    DESCRIPTION:string;  
+    QUANTITY:number;  
+    UNIT_PRICE:number;  
+    VALUE_TO_PAY:number;  
+}

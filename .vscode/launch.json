@@ -7,15 +7,9 @@
         {
             "type": "node",
             "request": "attach",
-            "name": "Attach by Process ID",
-            "processId": "${command:PickProcess}"
-        },
-
-        {
-            "type": "node",
-            "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}\\server\\routes\\servers.js"
+            "program": "${workspaceFolder}\\server\\routes\\servers.js",
+            "port": 3000
         }
     ]
 }
