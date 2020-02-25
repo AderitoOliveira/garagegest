@@ -1,16 +1,3 @@
-<!-- <div id="genericbardiv">
-  <div class="container-fluid">
-      <div class="row">
-          <div class="col-3">
-          </div>
-          <div class="col-6">
-          </div>
-          <div class="col-3">
-            <input type="text" name="search" placeholder="Pesquisar..."> 
-          </div>
-      </div>
-  </div>
-</div> -->
 <div id="actions">
 	<div class="row">
 		<div class="col-md-12">
@@ -40,18 +27,18 @@
 	</div>
 </div>
 <div id="content-general-container">
-  <div id="generic_row_header" class="shadow-sm p-3">
+  <div id="generic_row_header" class="shadow-sm">
       <div class="container-fluid">
           <div class="row">
-            <div class="col-1">Nome</div>
-            <div class="col-2">Morada</div>
-            <div class="col-1">Cidade</div>
-            <div class="col-2">NIF</div>
+            <div class="col-2">Nome</div>
+            <div class="col-3">Morada</div>
+            <div class="col-2">Cidade</div>
+            <div class="col-1">NIF</div>
 <!--             <div class="col-1">Código Ident.</div> -->
             <div class="col-2">Num telef.</div>
 <!--             <div class="col-2">Email</div> -->
             <div class="col-1">Apelido</div>
-            <div class="col-2">Data criaç.</div>
+<!--             <div class="col-2">Data criaç.</div> -->
              <div class="col-1"></div> <!-- Buttons -->
           </div>
         </div>
@@ -59,15 +46,15 @@
   <div id="generic_row" class="shadow-sm p-3 bg-white rounded"  *ngFor="let customer of dataSource | filter: searchText">
       <div class="container-fluid">
           <div class="row">
-            <div class="col-1">{{customer.NAME}}</div>
-            <div class="col-2">{{customer.ADDRESS}}</div>
-            <div class="col-1">{{customer.CITY_LOCATION}}</div>
-            <div class="col-2">{{customer.FISCAL_CODE}}</div>
+            <div class="col-2">{{customer.NAME}}</div>
+            <div class="col-3">{{customer.ADDRESS}}</div>
+            <div class="col-2">{{customer.CITY_LOCATION}}</div>
+            <div class="col-1">{{customer.FISCAL_CODE}}</div>
 <!--             <div class="col-1">{{customer.IDENTITY_CARD}}</div> -->
             <div class="col-2">{{customer.PHONE_NUMBER}}</div>
 <!--             <div class="col-2">{{customer.EMAIL_ADDRESS}}</div> -->
             <div class="col-1">{{customer.NICKNAME}}</div>
-            <div class="col-2">{{customer.CREATED_DATE}}</div>
+<!--             <div class="col-2">{{customer.CREATED_DATE}}</div> -->
  <!--            <div class="col-1">{{customer.MODIFIED_DATE}}</div> -->
             <div class="col-1">
               <i class="btn btn-warning btn-sm" (click)="customerDetails(customer)">Details</i>
