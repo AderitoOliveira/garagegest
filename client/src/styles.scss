@@ -342,6 +342,9 @@
     height: 40px;
     width: -webkit-fill-available;
     overflow-y: hidden;
+    .center_button {
+        display:inline-block
+    }
 }
 
 //CSS for the NAME of the page where we are located (clientes, vehicles)
