@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; 
 import { HttpModule } from '@angular/http';
 
+import { ModalModule } from './_modal';
+
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
 
@@ -36,7 +38,8 @@ import { VehicleRepairComponent } from './vehicles/vehicle-repair/vehicle-repair
     HttpClientModule,
     HttpModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    ModalModule
   ],
   providers: [GlobalCommunicationService],
   bootstrap: [AppComponent]

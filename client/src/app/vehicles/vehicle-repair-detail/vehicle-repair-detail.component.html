@@ -56,7 +56,7 @@
                         <div class="col-9">
                             <div class='form-group font-weight-bold'>
                                 <label for="name">Nome</label>
-                                <input class="form-control-sm" id="NAME" name="user[NAME]" [(ngModel)]="NAME" size="50" type="text" />
+                                <input class="form-control-sm" id="NAME" name="user[NAME]" [(ngModel)]="NAME" size="60" type="text" />
                             </div>
                         </div>
                         <div class="col-3">
@@ -68,9 +68,9 @@
                     </div>
                     <div class="row">
                         <div class="col-8">
-                            <div class='form-group font-weight-bold'>
+                            <div class='form-group font-weight-bold text-area'>
                                 <label for="address">Morada</label>
-                                <input class="form-control-sm" id="ADDRESS" name="user[ADDRESS]" [(ngModel)]="ADDRESS" size="75" type="text" />
+                                <input class="form-control-sm redemension-text-area" id="ADDRESS" name="user[ADDRESS]" [(ngModel)]="ADDRESS" size="85" type="text" />
                             </div>
                         </div>
                     </div>
@@ -91,8 +91,8 @@
             <tbody>    
                  <tr *ngFor="let dynamic of dynamicArray; let i = index;">    
                   <td>    
-                    <button type="button" class="btn btn-danger" aria-label="Left Align"  (click)="deleteRow(i)">
-                        <span class=" glyphicon glyphicon-trash " aria-hidden="true"></span>
+                    <button type="button" class="btn" aria-label="Left Align"  (click)="deleteRow(i)">
+                        <img src="../../../assets/btn-remove.svg" width="24px" height="24px" />
                     </button>
                   </td>    
                     <td>    

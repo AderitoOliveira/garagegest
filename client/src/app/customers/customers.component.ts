@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Routes, RouterModule, Router, ActivatedRoute } from '@angular/router';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
+import { Router } from '@angular/router';
+import { ModalService } from '../_modal';
+
 import { Customer } from './customers.model';
 import { CustomerService } from './customers.service';
 import { GlobalCommunicationService } from '../globalcommunicationservice';
@@ -26,7 +26,7 @@ export class CustomersComponent implements OnInit {
 
   private customerSubject = new Subject<string>();
 
-  constructor(private httpClient: HttpClient, private customerService: CustomerService, private router: Router, private globalCommunictionService: GlobalCommunicationService) { }
+  constructor(private httpClient: HttpClient, private customerService: CustomerService, private router: Router, private globalCommunictionService: GlobalCommunicationService, private modalService: ModalService) { }
 
   ngOnInit() {
     console.log("Inside ngOnInit");
@@ -63,4 +63,13 @@ export class CustomersComponent implements OnInit {
       this.router.navigate(['customerdetail', row], { skipLocationChange: true }); (3)
       //alert(row);
   }
+
+  openModal(id: string) {
+    this.modalService.open(id);
+  }
+
+  closeModal(id: string) {
+      this.modalService.close(id);
+  }
+
 }

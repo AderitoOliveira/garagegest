@@ -35,11 +35,11 @@
             <div class="col-2">Cidade</div>
             <div class="col-1">NIF</div>
 <!--             <div class="col-1">Código Ident.</div> -->
-            <div class="col-2">Num telef.</div>
+            <div class="col-1">Num telef.</div>
 <!--             <div class="col-2">Email</div> -->
             <div class="col-1">Apelido</div>
 <!--             <div class="col-2">Data criaç.</div> -->
-             <div class="col-1"></div> <!-- Buttons -->
+             <div class="col-2"></div> <!-- Buttons -->
           </div>
         </div>
   </div>
@@ -51,15 +51,21 @@
             <div class="col-2">{{customer.CITY_LOCATION}}</div>
             <div class="col-1">{{customer.FISCAL_CODE}}</div>
 <!--             <div class="col-1">{{customer.IDENTITY_CARD}}</div> -->
-            <div class="col-2">{{customer.PHONE_NUMBER}}</div>
+            <div class="col-1">{{customer.PHONE_NUMBER}}</div>
 <!--             <div class="col-2">{{customer.EMAIL_ADDRESS}}</div> -->
             <div class="col-1">{{customer.NICKNAME}}</div>
 <!--             <div class="col-2">{{customer.CREATED_DATE}}</div> -->
  <!--            <div class="col-1">{{customer.MODIFIED_DATE}}</div> -->
-            <div class="col-1">
+            <div class="col-2">
               <i class="btn btn-warning btn-sm center_button" (click)="customerDetails(customer)">Details</i>
+              <i class="btn btn-warning btn-sm center_button" (click)="openModal('custom-modal-1')">Modal</i>
             </div>
           </div>
       </div>
   </div>
 </div>
+<jw-modal id="custom-modal-1">
+  <h1>A Custom Modal!</h1>
+  <p>Home page text: <input type="text" [(ngModel)]="bodyText" /></p>
+  <button (click)="closeModal('custom-modal-1');">Close</button>
+</jw-modal>
