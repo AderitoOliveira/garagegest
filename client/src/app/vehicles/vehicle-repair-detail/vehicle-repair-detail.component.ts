@@ -6,6 +6,11 @@ import { GlobalCommunicationService } from '../../globalcommunicationservice';
 import { RepairDetailLine } from './vehicle-repair-detail.model';
 import { VehicleRepairDetailService } from './vehicle-repair-detail.service';
 
+import pdfMake from 'pdfmake/build/pdfmake';
+import pdfFonts from 'pdfmake/build/vfs_fonts';
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
+
 @Component({
   selector: 'app-vehicle-repair-detail',
   templateUrl: './vehicle-repair-detail.component.html',
@@ -69,6 +74,11 @@ export class VehicleRepairDetailComponent implements OnInit {
         //this.toastr.warning('Row deleted successfully', 'Delete row');  
         return true;  
     }  
-} 
+  } 
+
+  generatePdf(){
+    const documentDefinition = { content: 'This is an sample PDF printed with pdfMake' };
+    pdfMake.createPdf(documentDefinition).open();
+   }
 
 }
