@@ -575,4 +575,18 @@
     height: -webkit-fill-available;
     border-style: dotted;
 }
+
+.vehicle-repair-bottom-bar {
+
+    height:60px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-bottom: 5px solid rgb(230, 36, 22);
+    transition: border-color .5s ease-out;
+    outline-color: rgb(255, 17, 0);
+    .button-position {
+        margin-top: 10px;
+    }
+}
 /**********************************************************************************************************/
