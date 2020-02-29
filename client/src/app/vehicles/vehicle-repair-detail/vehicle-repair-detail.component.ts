@@ -78,7 +78,70 @@ export class VehicleRepairDetailComponent implements OnInit {
 
   generatePdf(){
     const documentDefinition = { content: 'This is an sample PDF printed with pdfMake' };
-    pdfMake.createPdf(documentDefinition).open();
+
+    function buildTableBody(data, columns) {
+      var body = [];
+  
+      body.push(columns);
+  
+      data.forEach(function(row) {
+          var dataRow = [];
+  
+          columns.forEach(function(column) {
+            if(row[column] && row[column] != "") {
+              console.log(row[column].toString());
+              dataRow.push(row[column].toString());
+              }
+          })
+  
+          if(dataRow.length > 0) {
+            body.push(dataRow);
+          }
+      });
+  
+      return body;
+  }
+  
+  function table(data, columns) {
+      return {
+        //  table: {
+        //    widths: [300, 50, 100, 50],
+        //      headerRows: 1,
+              body: buildTableBody(data, columns)
+        //  }
+      };
+  }
+ 
+    const dd = {
+      content: [
+        {
+          style: 'tableExample',
+          table: {
+            widths: [250, 70, 100, 90],
+            headerRows: 1,
+            body: buildTableBody(this.dynamicArray, ['DESCRIPTION', 'QUANTITY', 'UNIT_PRICE', 'VALUE_TO_PAY'])
+          }, 
+          layout: 'lightHorizontalLines'
+        }
+      ],
+      styles: {
+        tableExample: {
+          margin: [-10, 5, 0, 15]
+        },
+        tableHeader: {
+          bold: true,
+          fontSize: 13,
+          color: 'black'
+        }
+      },
+      defaultStyle: {
+        // alignment: 'justify'
+      }
+      
+    }
+
+    console.log(JSON.stringify(dd));
+    pdfMake.createPdf(JSON.parse(JSON.stringify(dd))).open();
    }
 
 }
