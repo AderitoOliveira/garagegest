@@ -71,10 +71,13 @@
 <div id="customer_details_container_header" class="shadow-sm">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-4">
+            <div class="col-11">
                 <span>
                     Veículos registados do Cliente
                 </span>
+            </div>
+            <div class="col-1">
+                <i class="btn btn-success btn-sm button-side-by-side" (click)="addRepairDetail()">Adicionar</i>
             </div>
         </div>
     </div>
@@ -91,7 +94,19 @@
             </div>
         </div>
     </div>
-
+</div>
+<div id="vehicle_details_container" *ngIf="ADD_REPAIR_DETAIL == true" class="shadow-sm p-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4 form-group">
+            <h4>TCHARAN</h4>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+    </div>
 </div>
 <div id="customer_details_vehicle_container" *ngIf="dataSource_size > 0" class="shadow-sm p-3">
     <div id="generic_row_header_inner" class="shadow-sm">

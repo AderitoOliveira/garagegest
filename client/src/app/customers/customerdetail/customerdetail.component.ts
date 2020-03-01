@@ -16,6 +16,7 @@ export class CustomerdetailComponent implements OnInit {
 
   headerName = 'Customer Detail';
   customer_detail:  any;
+  ADD_REPAIR_DETAIL : boolean = false;
 
   CLIENT_ID     = '';
   NAME          = '';
@@ -75,6 +76,14 @@ export class CustomerdetailComponent implements OnInit {
   vehicleDetails(row) {
     console.log(row);
       this.router.navigate(['vehicledetail', row], { skipLocationChange: true }); (3)
+  }
+
+  addRepairDetail () {
+    if(this.ADD_REPAIR_DETAIL == false) {
+      this.ADD_REPAIR_DETAIL = true;
+    } else {
+      this.ADD_REPAIR_DETAIL = false;
+    }
   }
 
   goBack() {
