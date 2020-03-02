@@ -7,7 +7,7 @@ import { ModalModule } from './_modal';
 
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
-//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,8 +40,8 @@ import { VehicleRepairComponent } from './vehicles/vehicle-repair/vehicle-repair
     HttpModule,
     FormsModule,
     CommonModule,
-    ModalModule
-    //NgbModule
+    ModalModule,
+    NgbModule
   ],
   providers: [GlobalCommunicationService],
   bootstrap: [AppComponent]
