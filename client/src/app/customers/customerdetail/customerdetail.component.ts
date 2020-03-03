@@ -4,6 +4,8 @@ import { GlobalCommunicationService } from './../../globalcommunicationservice';
 import { Vehicle } from './../../vehicles/vehicles.model';
 import { CustomerDetailService } from './customerdetail.service';
 
+import { ModalService } from '../../_modal';
+
 import {Observable} from 'rxjs';
 import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
 
@@ -46,7 +48,7 @@ export class CustomerdetailComponent implements OnInit {
   dataSource_size : number = 0;
   
 
-  constructor(private route: ActivatedRoute,  private customerDetailService: CustomerDetailService, private router: Router, private globalCommunictionService: GlobalCommunicationService) {
+  constructor(private route: ActivatedRoute,  private customerDetailService: CustomerDetailService, private router: Router, private globalCommunictionService: GlobalCommunicationService,private modalService: ModalService) {
     this.route.params.subscribe( params => {
       console.log(params);
       this.customer_detail  = params as any;
@@ -98,6 +100,14 @@ export class CustomerdetailComponent implements OnInit {
 
   goBack() {
     this.router.navigate(['clients',], ); (3)
+  }
+
+  openModal(id: string) {
+    this.modalService.open(id);
+  }
+
+  closeModal(id: string) {
+      this.modalService.close(id);
   }
 
   search = (text$: Observable<string>) =>

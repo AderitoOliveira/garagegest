@@ -77,7 +77,8 @@
                 </span>
             </div>
             <div class="col-1">
-                <i class="btn btn-success btn-sm button-side-by-side" (click)="addRepairDetail()">Adicionar</i>
+                <!-- <i class="btn btn-success btn-sm button-side-by-side" (click)="addRepairDetail()">Adicionar</i> -->
+                <i class="btn btn-warning btn-sm center_button" (click)="openModal('custom-modal-1')">Modal</i>
             </div>
         </div>
     </div>
@@ -151,3 +152,54 @@
         </div>
     </div>
 </div>
+
+<jw-modal id="custom-modal-1" style="height:300px; width:300px">
+  <div class="row" style="border-bottom: thick; border-color: red; border-style: none none solid none;margin-bottom: 30px;">
+    <!-- <h4>A Custom Modal!</h4> -->
+    <!-- <label for="typeahead-basic">Search for a state:</label>
+    <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search"/> -->
+    <div id="vehicle_details_container"  class="shadow-sm p-3" style="width:600px">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4">
+                </div>
+                <div class="col-4 form-group">
+                    <label for="typeahead-basic">Search for a state:</label>
+                    <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search"/>
+                </div>
+                <div class="col-4">
+                </div>
+            </div>
+        </div>
+        <button (click)="addRepairDetail()">Detail</button>
+   </div>
+   <div id="vehicle_details_container" *ngIf="ADD_REPAIR_DETAIL == true" class="shadow-sm p-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4 form-group">
+                <h4>TCHARAN</h4>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+    </div>
+</div>
+  </div>
+  <!-- <div id="vehicle_details_container" *ngIf="ADD_REPAIR_DETAIL == true" class="shadow-sm p-3" style="height:300px; width:300px">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4 form-group">
+                <label for="typeahead-basic">Search for a state:</label>
+                <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search"/>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+    </div>
+   </div> -->
+  <button (click)="closeModal('custom-modal-1');">Close</button>
+</jw-modal>
