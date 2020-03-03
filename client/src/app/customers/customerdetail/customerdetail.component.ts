@@ -9,14 +9,16 @@ import { ModalService } from '../../_modal';
 import {Observable} from 'rxjs';
 import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
 
-const states = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado',
+/* const states = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado',
   'Connecticut', 'Delaware', 'District Of Columbia', 'Federated States Of Micronesia', 'Florida', 'Georgia',
   'Guam', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine',
   'Marshall Islands', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana',
   'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
   'Northern Mariana Islands', 'Ohio', 'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico', 'Rhode Island',
   'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virgin Islands', 'Virginia',
-  'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
+  'Washington', 'West Virginia', 'Wisconsin', 'Wyoming']; */
+
+  const states = [{"id":0, "name": "XPTO"}, {"id":1, "name": "XYZ"}];
 
 @Component({
   selector: 'app-customerdetail',
@@ -110,12 +112,20 @@ export class CustomerdetailComponent implements OnInit {
       this.modalService.close(id);
   }
 
+  logEvent(value : string) {
+    console.log(value);
+  }
+
+  formatter = (x: {name: string}) => x.name;
+
   search = (text$: Observable<string>) =>
     text$.pipe(
       debounceTime(200),
       distinctUntilChanged(),
-      map(term => term.length < 2 ? []
-        : states.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
+      /* map(term => term.length < 2 ? []
+        : states.filter(v => v["name"].toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10)) */
+        map(term => term === '' ? []
+        : states.filter(v => v.name.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
     )
 
 }
