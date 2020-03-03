@@ -18,7 +18,7 @@ import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
   'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virgin Islands', 'Virginia',
   'Washington', 'West Virginia', 'Wisconsin', 'Wyoming']; */
 
-  const states = [{"id":0, "name": "XPTO"}, {"id":1, "name": "XYZ"}];
+  const states = [{"id":0, "licence_plate": "32-12-NH", "brand": "Seat", "model": "Ibiza"}, {"id":1, "licence_plate": "15-47-ZA", "brand": "Volvo", "model": "S40"}];
 
 @Component({
   selector: 'app-customerdetail',
@@ -48,6 +48,8 @@ export class CustomerdetailComponent implements OnInit {
   //dataSource = <Vehicle> (this.httpdata);
   dataSource : [Vehicle];
   dataSource_size : number = 0;
+  VEHICLE_BRAND = '';
+  VEHICLE_MODEL = '';
   
 
   constructor(private route: ActivatedRoute,  private customerDetailService: CustomerDetailService, private router: Router, private globalCommunictionService: GlobalCommunicationService,private modalService: ModalService) {
@@ -114,9 +116,16 @@ export class CustomerdetailComponent implements OnInit {
 
   logEvent(value : []) {
     console.log(value["name"]);
+    if(this.ADD_REPAIR_DETAIL == false) {
+      this.ADD_REPAIR_DETAIL = true;
+    } else {
+      this.ADD_REPAIR_DETAIL = false;
+    }
+    this.VEHICLE_MODEL = value["model"];
+    this.VEHICLE_BRAND = value["brand"];
   }
 
-  formatter = (x: {name: string}) => x.name;
+  formatter = (x: {licence_plate: string}) => x.licence_plate;
 
   search = (text$: Observable<string>) =>
     text$.pipe(
@@ -125,7 +134,7 @@ export class CustomerdetailComponent implements OnInit {
       /* map(term => term.length < 2 ? []
         : states.filter(v => v["name"].toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10)) */
         map(term => term === '' ? []
-        : states.filter(v => v.name.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
+        : states.filter(v => v.licence_plate.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
     )
 
 }
