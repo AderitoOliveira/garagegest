@@ -112,8 +112,8 @@ export class CustomerdetailComponent implements OnInit {
       this.modalService.close(id);
   }
 
-  logEvent(value : string) {
-    console.log(value);
+  logEvent(value : []) {
+    console.log(value["name"]);
   }
 
   formatter = (x: {name: string}) => x.name;
