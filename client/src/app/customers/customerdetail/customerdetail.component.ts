@@ -131,8 +131,6 @@ export class CustomerdetailComponent implements OnInit {
     text$.pipe(
       debounceTime(200),
       distinctUntilChanged(),
-      /* map(term => term.length < 2 ? []
-        : states.filter(v => v["name"].toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10)) */
         map(term => term === '' ? []
         : states.filter(v => v.licence_plate.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
     )

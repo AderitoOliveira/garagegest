@@ -552,8 +552,16 @@
     .title{
         margin-top: 20px;
         margin-bottom: 30px;
+        padding-bottom: 15px;
         font-size: 18px;
         font-weight: bold;
+        /* border-bottom: 5px solid rgb(230, 36, 22);
+        transition: border-color .5s ease-out;
+        outline-color: rgb(255, 17, 0); */
+
+        background: linear-gradient( to left, rgb(255, 0, 0) 0%, rgb(243, 0, 0) 12%, rgb(230, 182, 182) 70%, rgb(255, 255, 255) 98% ) left bottom #fff no-repeat;
+        background-size: 100% 5px;
+        
     }
 }
 
@@ -565,8 +573,14 @@
     .title{
         margin-top: 20px;
         margin-bottom: 30px;
+        padding-bottom: 15px;
         font-size: 18px;
         font-weight: bold;
+        /* border-bottom: 5px solid rgb(230, 36, 22);
+        transition: border-color .5s ease-out;
+        outline-color: rgb(255, 17, 0); */
+        background: linear-gradient( to left, rgb(255, 0, 0) 0%, rgb(243, 0, 0) 12%, rgb(230, 182, 182) 70%, rgb(255, 255, 255) 98% ) left bottom #fff no-repeat;
+        background-size: 100% 5px;
     }
 }
 
@@ -582,9 +596,9 @@
     margin-left: 5px;
     margin-bottom: 20px;
     background-color: white;
-    border-bottom: 5px solid rgb(230, 36, 22);
-    border-right: 5px solid rgb(230, 36, 22);
-    transition: border-color .5s ease-out;
+    //border-bottom: 5px solid rgb(230, 36, 22);
+    //border-right: 5px solid rgb(230, 36, 22);
+    //transition: border-color .5s ease-out;
     outline-color: rgb(255, 17, 0);
     .button-position {
         margin-top: 10px;

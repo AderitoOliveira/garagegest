@@ -57,7 +57,9 @@
 <!--             <div class="col-2">{{customer.CREATED_DATE}}</div> -->
  <!--            <div class="col-1">{{customer.MODIFIED_DATE}}</div> -->
             <div class="col-2">
-              <i class="btn btn-warning btn-sm center_button" (click)="customerDetails(customer)">Details</i>
+              <a class="btn btn-sm" (click)="customerDetails(customer)" title="Ver detalhes do Cliente">
+                <img src="assets/eye.svg"  width="28px" height="28px" />
+              </a>
               <i class="btn btn-warning btn-sm center_button" (click)="openModal('custom-modal-2')">Modal</i>
             </div>
           </div>
