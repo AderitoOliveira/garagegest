@@ -541,6 +541,23 @@
     font-weight: bold;
 }
 
+.repair_header {
+    font-size: 16px; 
+    font-weight: bold;
+    padding-bottom: 10px;
+    background: linear-gradient( to left, rgb(221, 221, 221) 0%, rgb(221, 221, 221)  12%, rgb(221, 221, 221)  70%, rgb(255, 255, 255) 100% ) left bottom #fff no-repeat; 
+    background-size: 100% 5px;
+}
+
+.repair_detail {
+    font-size: 16px; 
+    font-weight: bold;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    background: linear-gradient( to left, rgb(221, 221, 221) 0%, rgb(221, 221, 221)  12%, rgb(221, 221, 221) 70%, rgb(255, 255, 255) 98% ) left bottom #fff no-repeat; 
+    background-size: 100% 1px;
+}
+
 /**********************************************************************************************************/
 /***************************************  VEHICLE REPAIR DETAILS   ****************************************/
 
