@@ -552,9 +552,10 @@
 .repair_detail {
     font-size: 16px; 
     font-weight: bold;
-    margin-top: 10px;
+    //margin-top: 10px;
+    padding-top: 10px;
     padding-bottom: 10px;
-    background: linear-gradient( to left, rgb(221, 221, 221) 0%, rgb(221, 221, 221)  12%, rgb(221, 221, 221) 70%, rgb(255, 255, 255) 98% ) left bottom #fff no-repeat; 
+    background: linear-gradient( to left, rgb(221, 221, 221) 0%, rgb(221, 221, 221)  12%, rgb(221, 221, 221) 70%, rgb(255, 255, 255) 98% ) left top #fff no-repeat; 
     background-size: 100% 1px;
 }
 
