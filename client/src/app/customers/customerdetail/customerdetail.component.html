@@ -154,34 +154,39 @@
 
 <jw-modal id="custom-modal-1" style="height:200px; width:600px; background-color: gainsboro;">
     <div class="container-fluid">
-  <!-- <div class="row medium-modal" style="border-bottom: thick; border-color: red; border-style: none none solid none;margin-bottom: 1px;"> -->
-   <div class="row justify-content-center">
-        <div class="col-8">
-            <label for="typeahead-basic" style="font-size: 16px;font-weight: bold; text-align: center;">Matrícula:</label>
-            <input id="typeahead-basic" type="text" size="60" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [inputFormatter]="formatter" [resultFormatter]="formatter" (change)="logEvent(model)"/>
+        <div class="row" style="font-size: 18px;font-weight: bold; margin-bottom: 10px;">
+            <span>
+                Associar Veículo ao cliente
+            </span>
         </div>
-   </div>
-   <div class="row" *ngIf="ADD_REPAIR_DETAIL == true">
-    <div id="vehicle_details_container" >
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-6">
-                        <label for="phone_number">Marca</label>
-                        <input class="form-control" id="phone_number" name="user[phone_number]" [(ngModel)]="VEHICLE_BRAND" size="30" type="text" />
-                    </div>
-                    <div class="col-6">
-                        <label for="phone_number">Modelo</label>
-                        <input class="form-control" id="phone_number" name="user[phone_number]" [(ngModel)]="VEHICLE_MODEL" size="30" type="text" />
-                    </div>
+        <div class="row" style="border-bottom: thick; border-color: red; border-style: none none solid none;margin-bottom: 1px;margin-bottom: 20px;">
+        </div>
+        <div class="row justify-content-center">
+                <div class="col-8">
+                    <label for="typeahead-basic" style="font-size: 16px;font-weight: bold; text-align: center;">Matrícula:</label>
+                    <input id="typeahead-basic" type="text" size="60" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [inputFormatter]="formatter" [resultFormatter]="formatter" (change)="logEvent(model)"/>
                 </div>
-            </div>
+        </div>
+        <div class="row shadow-sm p-3" *ngIf="ADD_REPAIR_DETAIL == true" style="margin-top: 20px; margin-bottom: 10px;">
+            <!-- <div id="vehicle_details_container" >
+                    <div class="container-fluid">
+                        <div class="row"> -->
+                            <div class="col-6">
+                                <label for="phone_number">Marca</label>
+                                <input class="form-control" id="phone_number" name="user[phone_number]" [(ngModel)]="VEHICLE_BRAND" type="text" />
+                            </div>
+                            <div class="col-6">
+                                <label for="phone_number">Modelo</label>
+                                <input class="form-control" id="phone_number" name="user[phone_number]" [(ngModel)]="VEHICLE_MODEL" type="text" />
+                            </div>
+                       <!--  </div>
+                    </div>
+                </div> -->
+        </div>
+        <div class="row" style="margin-bottom: 1px; margin-top: 20px;">
+                <div class="col-md-3 offset-md-9" style="margin-bottom:1    0px;">
+                    <button class="btn btn-sm btn-danger" (click)="closeModal('custom-modal-1');">Fechar</button>
+                </div>
         </div>
     </div>
-    <div class="row" style="border-bottom: thick; border-color: red; border-style: none none solid none;margin-bottom: 1px;">
-        <div class="col-md-3 offset-md-9" style="margin-top: 10px; margin-bottom:20px;">
-            <button class="btn btn-sm btn-danger" (click)="closeModal('custom-modal-1');">Fechar</button>
-        </div>
-    </div>
-  <!-- </div> -->
-</div>
 </jw-modal>

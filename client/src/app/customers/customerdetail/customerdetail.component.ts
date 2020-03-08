@@ -107,6 +107,9 @@ export class CustomerdetailComponent implements OnInit {
   }
 
   openModal(id: string) {
+    if(this.ADD_REPAIR_DETAIL == true) {
+      this.ADD_REPAIR_DETAIL = false;
+    }
     this.modalService.open(id);
   }
 
