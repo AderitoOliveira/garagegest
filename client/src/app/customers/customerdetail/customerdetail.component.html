@@ -164,7 +164,7 @@
         <div class="row justify-content-center">
                 <div class="col-8" style="margin-top: 20px; margin-bottom: 10px">
                     <!-- <label for="typeahead-basic" style="font-size: 16px;font-weight: bold; text-align: center;">Matrícula:</label> -->
-                    <input id="typeahead-basic" type="text" placeholder="Pesquisar Matrícula" style="text-align: center;" size="60" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [inputFormatter]="formatter" [resultFormatter]="formatter" (change)="logEvent(model)"/>
+                    <input id="typeahead-basic" type="text" placeholder="Pesquisar Matrícula" style="text-align: center;" size="60" class="form-control" [(ngModel)]="searchValue" [ngbTypeahead]="search" [inputFormatter]="formatter" [resultFormatter]="formatter" (change)="logEvent(searchValue)"/>
                 </div>
         </div>
         <div class="row shadow-sm" *ngIf="ADD_REPAIR_DETAIL == true" style="margin-top: 20px; margin-bottom: 10px; border-bottom: thin; border-top: thin ;border-color: red; border-style: solid none solid none;">

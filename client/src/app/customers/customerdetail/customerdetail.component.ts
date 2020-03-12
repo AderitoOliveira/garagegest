@@ -50,6 +50,7 @@ export class CustomerdetailComponent implements OnInit {
   dataSource_size : number = 0;
   VEHICLE_BRAND = '';
   VEHICLE_MODEL = '';
+  searchValue   = '';
   
 
   constructor(private route: ActivatedRoute,  private customerDetailService: CustomerDetailService, private router: Router, private globalCommunictionService: GlobalCommunicationService,private modalService: ModalService) {
@@ -110,6 +111,7 @@ export class CustomerdetailComponent implements OnInit {
     if(this.ADD_REPAIR_DETAIL == true) {
       this.ADD_REPAIR_DETAIL = false;
     }
+    this.searchValue  = '';
     this.modalService.open(id);
   }
 
