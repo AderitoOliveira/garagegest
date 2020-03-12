@@ -162,7 +162,7 @@
         <div class="row" style="border-bottom: thick; border-color: red; border-style: none none solid none;margin-bottom: 1px;margin-bottom: 20px;">
         </div>
         <div class="row justify-content-center">
-                <div class="col-8">
+                <div class="col-8" style="margin-top: 20px; margin-bottom: 10px">
                     <!-- <label for="typeahead-basic" style="font-size: 16px;font-weight: bold; text-align: center;">Matrícula:</label> -->
                     <input id="typeahead-basic" type="text" placeholder="Pesquisar Matrícula" style="text-align: center;" size="60" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [inputFormatter]="formatter" [resultFormatter]="formatter" (change)="logEvent(model)"/>
                 </div>
