@@ -11,30 +11,30 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6">
+                        <div class='col-sm-6'> 
                             <div class='form-group font-weight-bold'>
                                 <label for="registration_plate">Marca</label>
-                                <input class="form-control-sm" id="brand" name="user[brand]" [(ngModel)]="BRAND" size="30" type="text" />
+                                <input class="form-control" id="brand" name="user[brand]" [(ngModel)]="BRAND" size="30" type="text" />
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class='col-sm-6'> 
                             <div class='form-group font-weight-bold'>
                                 <label for="registration_plate">Modelo</label>
-                                <input class="form-control-sm" id="model" name="user[model]" [(ngModel)]="MODEL" size="30" type="text" />
+                                <input class="form-control" id="model" name="user[model]" [(ngModel)]="MODEL" size="30" type="text" />
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6">
+                        <div class='col-sm-6'>
                             <div class='form-group font-weight-bold'>
                                 <label for="registration_plate">Matrícula</label>
-                                <input class="form-control-sm" id="LICENSE_PLATE" name="user[LICENSE_PLATE]" [(ngModel)]="LICENSE_PLATE" size="30" type="text" />
+                                <input class="form-control" id="LICENSE_PLATE" name="user[LICENSE_PLATE]" [(ngModel)]="LICENSE_PLATE" size="30" type="text" />
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class='col-sm-6'>
                             <div class='form-group font-weight-bold'>
                                 <label for="registration_plate">Km's revisão</label>
-                                <input class="form-control-sm" id="KMS_REGISTERED" name="user[KMS_REGISTERED]" [(ngModel)]="KMS_REGISTERED" size="30" type="text" />
+                                <input class="form-control" id="KMS_REGISTERED" name="user[KMS_REGISTERED]" [(ngModel)]="KMS_REGISTERED" size="30" type="text" />
                             </div>
                         </div>
                     </div>
@@ -53,24 +53,24 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-9">
+                        <div class='col-sm-8'>    
                             <div class='form-group font-weight-bold'>
-                                <label for="name">Nome</label>
-                                <input class="form-control-sm" id="NAME" name="user[NAME]" [(ngModel)]="NAME" size="60" type="text" />
+                                <label for="user_title">Nome</label>
+                                <input class="form-control" id="NAME" name="user[title]" [(ngModel)]="NAME" size="80" type="text" />
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class='col-sm-4'>
                             <div class='form-group font-weight-bold'>
-                                <label for="nif">NIF</label>
-                                <input class="form-control-sm" id="FISCAL_CODE" name="user[FISCAL_CODE]" [(ngModel)]="FISCAL_CODE" size="10" type="text" />
+                                <label for="user_firstname">NIF</label>
+                                <input class="form-control" id="FISCAL_CODE" name="user[firstname]" required="true" [(ngModel)]="FISCAL_CODE" size="30" type="text" />
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-8">
-                            <div class='form-group font-weight-bold text-area'>
+                        <div class='col-sm-12'> 
+                            <div class='form-group font-weight-bold'>
                                 <label for="address">Morada</label>
-                                <input class="form-control-sm redemension-text-area" id="ADDRESS" name="user[ADDRESS]" [(ngModel)]="ADDRESS" size="85" type="text" />
+                                <input class="form-control" id="ADDRESS" name="user[ADDRESS]" [(ngModel)]="ADDRESS" size="85" type="text" />
                             </div>
                         </div>
                     </div>
